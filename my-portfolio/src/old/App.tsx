@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './Components/Header'
 import Terminal from './Components/Terminal'
-import myImg from "./assets/me.png";
+// import myImg from "./assets/me.png";
 import { useHideHeaderOnSection } from './Hooks/HideHeaderOnTerminal';
 
 function App() {

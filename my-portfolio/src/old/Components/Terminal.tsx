@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import myImg from "../assets/me-colored.png";
 
 export default function Terminal() {
