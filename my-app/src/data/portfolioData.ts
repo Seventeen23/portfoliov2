@@ -125,6 +125,7 @@ export const projectCategories: ProjectCategory[] = [
         href: "/sna_paper.pdf",
         description: "A research paper that investigates the relationship between various network metrics and the transmission of infectious diseases within a medical contact network.",
         tags: ["Network Analysis", "Epidemiology", "Data Science"],
+        badge: "Unpublished",
       },
     ],
   },
