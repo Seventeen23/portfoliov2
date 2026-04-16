@@ -56,6 +56,7 @@ export const projectCategories: ProjectCategory[] = [
         description: "A full-stack web app designed to track, predict, and simulate trash movement and accumulation Davao Golf. \n\nBuilt with Python, FastAPI, Raspberry Pi4, YOLO11, and MongoDB.",
         tags: ["FastAPI", "Object Detection", "MongoDB", "Data Analysis & Visualization"],
         banner: undp_banner,
+        badge: "United Nations Development Programme (UNDP) 2025 Challenge",
       },
       {
         title: "IsdaKnow",
@@ -157,6 +158,7 @@ export interface Friend {
 export const friends: Friend[] = [
   { name: "Giver", href: "https://giverphine-portfolio.vercel.app/", avatar: giver_avatar },
   { name: "Hans", href: "#", avatar: "" },
+  { name: "Dessy", href: "#", avatar: "" },
 ];
 
 // ============================================================
