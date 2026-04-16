@@ -4,7 +4,7 @@
 
 export const profile = {
   name: "Seventeen",
-  displayNames: ["Seventeen (en)", "あなたの名前 (ja)"],
+  displayNames: ["Seventeen (en)", "実佳 (jp)"],
   pronouns: "(He/Him)",
   tagline: "full-stack developer crafting web experiences & open-source tools.",
   avatar: "./assets/avatar.png", // URL to your avatar image, leave empty for initials fallback
