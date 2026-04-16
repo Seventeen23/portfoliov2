@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
-  profile, projectCategories, blogPosts, friends, publicKeys,
-  type Project, type ProjectCategory, type BlogPost, type Friend, type PublicKey,
+  profile, projectCategories, blogPosts, friends,
+  type Project, type ProjectCategory, type BlogPost, type Friend,
 } from "./data/portfolioData";
 
 // ─── SVG Icons ─────────────────────────────────────────────────────
@@ -58,17 +58,17 @@ const MoonIcon = () => (
     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
   </svg>
 );
-const CopyIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-  </svg>
-);
-const CheckIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="20 6 9 17 4 12"/>
-  </svg>
-);
+// const CopyIcon = () => (
+//   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//     <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+//     <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+//   </svg>
+// );
+// const CheckIcon = () => (
+//   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+//     <polyline points="20 6 9 17 4 12"/>
+//   </svg>
+// );
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   github: GithubIcon, twitter: TwitterIcon, bluesky: BlueskyIcon,
@@ -106,23 +106,23 @@ const Reveal: React.FC<{ children: React.ReactNode; delay?: number }> = ({ child
 };
 
 // ─── Copy Button ────────────────────────────────────────────────────
-const CopyButton: React.FC<{ text: string }> = ({ text }) => {
-  const [copied, setCopied] = useState(false);
-  const handle = () => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true); setTimeout(() => setCopied(false), 1800);
-    });
-  };
-  return (
-    <button
-      onClick={handle}
-      title="Copy"
-      className="flex items-center p-1.5 rounded border border-white/10 dark:border-white/10 border-black/10 text-white/30 dark:text-white/30 text-black/30 hover:border-violet-400/50 hover:text-violet-400 transition-colors"
-    >
-      {copied ? <CheckIcon /> : <CopyIcon />}
-    </button>
-  );
-};
+// const CopyButton: React.FC<{ text: string }> = ({ text }) => {
+//   const [copied, setCopied] = useState(false);
+//   const handle = () => {
+//     navigator.clipboard.writeText(text).then(() => {
+//       setCopied(true); setTimeout(() => setCopied(false), 1800);
+//     });
+//   };
+//   return (
+//     <button
+//       onClick={handle}
+//       title="Copy"
+//       className="flex items-center p-1.5 rounded border border-white/10 dark:border-white/10 border-black/10 text-white/30 dark:text-white/30 text-black/30 hover:border-violet-400/50 hover:text-violet-400 transition-colors"
+//     >
+//       {copied ? <CheckIcon /> : <CopyIcon />}
+//     </button>
+//   );
+// };
 
 // ─── Project Card ───────────────────────────────────────────────────
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
