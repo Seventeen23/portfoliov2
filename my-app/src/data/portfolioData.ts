@@ -12,17 +12,17 @@ import isdaknow_banner from "../assets/isdaknow_banner.png"; // Project Banner
 
 export const profile = {
   name: "Seventeen",
-  displayNames: ["Seventeen (en)", "実佳 (jp)"],
+  displayNames: ["Matthew Feri Tanutan (en)","Seventeen (en)", "実佳 (jp)"],
   pronouns: "(He/Him)",
   tagline: "Full-stack & Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
   avatar: avatar, // URL to your avatar image, leave empty for initials fallback
   socials: [
-    { label: "Resume",    href: "/resume.pdf",                              icon: "resume",  download: true },
-    { label: "GitHub",    href: "https://github.com/Seventeen23",           icon: "github"  },
-    { label: "Twitter",   href: "https://x.com/MatthewTanutan",                icon: "twitter" },
+    { label: "Resume",    href: "/resume.pdf",                                icon: "resume",     download: true },
+    { label: "GitHub",    href: "https://github.com/Seventeen23",             icon: "github"  },
+    { label: "Twitter",   href: "https://x.com/MatthewTanutan",               icon: "twitter" },
     // { label: "Bluesky",   href: "https://bsky.app/profile/you.bsky.social",  icon: "bluesky" },
     // { label: "Discord",   href: "https://discord.gg/yourserver",             icon: "discord" },
-    { label: "Email",     href: "mailto:matthewtanutan17@gmail.com",         icon: "email"   },
+    { label: "Email",     href: "mailto:matthewtanutan17@gmail.com",          icon: "email"   },
     // { label: "itch.io",   href: "https://yourname.itch.io",                  icon: "itch"    },
   ],
 };
@@ -62,7 +62,7 @@ export const projectCategories: ProjectCategory[] = [
       {
         title: "IsdaKnow",
         href: "#",
-        description: "An AI-Powered web app that identify fish specied by uploading a fish image or via realtime web camera. Also won 3rd Place in the InnoFiesta 2024: AI and Data Science Competition. \n\nBuilt with YOLOv8, Flask, and OpenCV",
+        description: "An AI-Powered web app that identifies fish species by uploading a fish image or via realtime web camera. Also won 3rd Place in the InnoFiesta 2024: AI and Data Science Competition. \n\nBuilt with YOLOv8, Flask, and OpenCV",
         tags: ["Image Classification", "AI", "Flask", "Data Cleaning & Annotation"],
         banner: isdaknow_banner,
         badge: "Undeployed",

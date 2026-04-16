@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react"
 import {
   profile, projectCategories, blogPosts, friends,
   type Project, type ProjectCategory, type BlogPost, type Friend,
@@ -239,7 +240,7 @@ const App: React.FC = () => {
 
   return (
     <div className={`min-h-screen flex flex-col ${pageBg} ${textBase} transition-colors duration-300`}>
-
+      <Analytics />
       {/* ── Nav ── */}
       <header className={`sticky top-0 z-50 flex items-center justify-between px-6 h-[52px] ${navBg} backdrop-blur-xl border-b ${borderBase} transition-colors duration-300`}
         style={{ paddingLeft: "max(24px, calc((100% - 820px) / 2))", paddingRight: "max(24px, calc((100% - 820px) / 2))" }}
