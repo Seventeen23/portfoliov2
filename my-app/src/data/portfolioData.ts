@@ -119,7 +119,12 @@ export const projectCategories: ProjectCategory[] = [
     emoji: "📄",
     title: "Papers & Research",
     projects: [
-      // TO BE ADDED In THE FUTURE
+      {
+        title: "Exploring the Role of Network Metrics in Infectious Disease Transmission: A Case Study on Medical Contact Networks",
+        href: "/sna_paper.pdf",
+        description: "A research paper that investigates the relationship between various network metrics and the transmission of infectious diseases within a medical contact network.",
+        tags: ["Network Analysis", "Epidemiology", "Data Science"],
+      },
     ],
   },
   {
