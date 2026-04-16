@@ -2,19 +2,25 @@
 // 🎨 PORTFOLIO DATA — Edit everything here!
 // ============================================================
 
+import avatar         from "../assets/avatar.png"; // Profile Picture
+import giver_avatar   from "../assets/giver_avatar.png"; // Friend's Avatar
+
+import undp_banner     from "../assets/undp_banner.png"; // Project Banner
+
 export const profile = {
   name: "Seventeen",
   displayNames: ["Seventeen (en)", "実佳 (jp)"],
   pronouns: "(He/Him)",
-  tagline: "full-stack developer crafting web experiences & open-source tools.",
-  avatar: "./assets/avatar.png", // URL to your avatar image, leave empty for initials fallback
+  tagline: "Full-stack & Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
+  avatar: avatar, // URL to your avatar image, leave empty for initials fallback
   socials: [
-    { label: "GitHub",    href: "https://github.com/yourusername",           icon: "github"  },
-    { label: "Twitter",   href: "https://x.com/yourusername",                icon: "twitter" },
-    { label: "Bluesky",   href: "https://bsky.app/profile/you.bsky.social",  icon: "bluesky" },
-    { label: "Discord",   href: "https://discord.gg/yourserver",             icon: "discord" },
-    { label: "Email",     href: "mailto:you@example.com",                    icon: "email"   },
-    { label: "itch.io",   href: "https://yourname.itch.io",                  icon: "itch"    },
+    { label: "Resume",    href: "/resume.pdf",                               icon: "resume"  },
+    { label: "GitHub",    href: "https://github.com/Seventeen23",           icon: "github"  },
+    { label: "Twitter",   href: "https://x.com/MatthewTanutan",                icon: "twitter" },
+    // { label: "Bluesky",   href: "https://bsky.app/profile/you.bsky.social",  icon: "bluesky" },
+    // { label: "Discord",   href: "https://discord.gg/yourserver",             icon: "discord" },
+    { label: "Email",     href: "mailto:matthewtanutan17@gmail.com",         icon: "email"   },
+    // { label: "itch.io",   href: "https://yourname.itch.io",                  icon: "itch"    },
   ],
 };
 
@@ -43,15 +49,15 @@ export const projectCategories: ProjectCategory[] = [
     title: "Web Projects",
     projects: [
       {
-        title: "My Awesome App",
-        href: "https://github.com/yourusername/awesome-app",
-        description: "A full-stack web application built with Next.js and PostgreSQL.",
-        tags: ["Next.js", "TypeScript", "PostgreSQL"],
-        banner: "",
+        title: "UNDP WasteWatch",
+        href: "https://github.com/Team2-UNDP/.github",
+        description: "A full-stack web application designed to track, predict, and simulate trash movement and accumulation Davao Golf. \n\nBuilt with Python, FastAPI, Raspberry Pi4, YOLO11, and MongoDB.",
+        tags: ["FastAPI", "Object Detection", "MongoDB", "Raspberry Pi"],
+        banner: undp_banner,
       },
       {
         title: "Portfolio Site",
-        href: "https://yourportfolio.com",
+        href: "https://seventeen-portfolio.vercel.app/",
         description: "This portfolio! Built with React and TypeScript.",
         tags: ["React", "TypeScript", "Tailwind"],
       },
@@ -154,8 +160,8 @@ export interface Friend {
 }
 
 export const friends: Friend[] = [
-  { name: "Friend One", href: "https://friendone.dev", avatar: "" },
-  { name: "Friend Two", href: "https://friendtwo.com", avatar: "" },
+  { name: "Giver", href: "https://giverphine-portfolio.vercel.app/", avatar: giver_avatar },
+  { name: "Hans", href: "#", avatar: "" },
 ];
 
 // ============================================================
