@@ -4,7 +4,7 @@
 
 import avatar         from "../assets/avatar.png"; // Profile Picture
 import giver_avatar   from "../assets/giver_avatar.png"; // Friend's Avatar
-import des_avatar     from "../assets/des_avatar.png"; // Friend's Avatar
+import des_avatar     from "../assets/des_avatar.jpg"; // Friend's Avatar
 
 import undp_banner     from "../assets/undp_banner.png"; // Project Banner
 import mciis_banner    from "../assets/mciis_banner.png"; // Project Banner
