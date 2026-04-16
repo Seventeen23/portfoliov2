@@ -130,15 +130,15 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
     href={project.href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex flex-col bg-[#16161a] dark:bg-[#16161a] hover:bg-[#1e1e24] dark:hover:bg-[#1e1e24] transition-colors duration-200 overflow-hidden"
+    className="rounded-xl group flex flex-col bg-[#16161a] dark:bg-[#16161a] hover:bg-[#1e1e24] dark:hover:bg-[#1e1e24] transition-colors duration-200 overflow-hidden"
   >
     {project.banner && (
-      <div className="h-64 overflow-hidden bg-black/20">
+      <div className="h-58 overflow-hidden bg-black/20">
         <img
           src={project.banner}
           alt={`${project.title} banner`}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+          className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-[1.05]"
         />
       </div>
     )}
@@ -180,7 +180,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
 
 // ─── Category Section ───────────────────────────────────────────────
 const CategorySection: React.FC<ProjectCategory> = ({ emoji, title, projects }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <div className="mb-2.5 border border-white/[0.07] dark:border-white/[0.07] border-black/[0.07] rounded-xl overflow-hidden hover:border-white/[0.14] dark:hover:border-white/[0.14] hover:border-black/[0.12] transition-colors">
       <button
@@ -189,13 +189,13 @@ const CategorySection: React.FC<ProjectCategory> = ({ emoji, title, projects }) 
       >
         <span className="text-[16px]">{emoji}</span>
         <span className="flex-1 font-display font-semibold text-[13.5px] text-white/90 dark:text-white/90">{title}</span>
-        <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/5 dark:bg-white/5 text-white/30 dark:text-white/30">
+        <span className="text-[12px] font-mono px-2 py-0.5 rounded-full bg-white/5 dark:bg-white/5 text-white/30 dark:text-violet-400">
           {projects.length}
         </span>
         <ChevronIcon className={`text-white/30 dark:text-white/30 transition-transform duration-250 ${open ? "rotate-90" : ""}`} />
       </button>
       {open && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-px bg-white/[0.05] dark:bg-white/[0.05]">
+        <div className="p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 bg-white/[0.05] dark:bg-white/[0.05]">
           {projects.map(p => <ProjectCard key={p.title} project={p} />)}
         </div>
       )}
@@ -313,7 +313,7 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* Public Keys */}
+        {/* Public Keys
         {publicKeys.length > 0 && (
           <section className="pt-11">
             <Reveal>
@@ -332,7 +332,7 @@ const App: React.FC = () => {
               </div>
             </Reveal>
           </section>
-        )}
+        )} */}
 
         {/* Blog Posts */}
         {blogPosts.length > 0 && (

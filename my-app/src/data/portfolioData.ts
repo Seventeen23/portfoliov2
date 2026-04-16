@@ -6,6 +6,8 @@ import avatar         from "../assets/avatar.png"; // Profile Picture
 import giver_avatar   from "../assets/giver_avatar.png"; // Friend's Avatar
 
 import undp_banner     from "../assets/undp_banner.png"; // Project Banner
+import mciis_banner    from "../assets/mciis_banner.png"; // Project Banner
+import isdaknow_banner from "../assets/isdaknow_banner.png"; // Project Banner
 
 export const profile = {
   name: "Seventeen",
@@ -14,7 +16,7 @@ export const profile = {
   tagline: "Full-stack & Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
   avatar: avatar, // URL to your avatar image, leave empty for initials fallback
   socials: [
-    { label: "Resume",    href: "/resume.pdf",                               icon: "resume"  },
+    { label: "Resume",    href: "/resume1.pdf",                               icon: "resume",  download: true },
     { label: "GitHub",    href: "https://github.com/Seventeen23",           icon: "github"  },
     { label: "Twitter",   href: "https://x.com/MatthewTanutan",                icon: "twitter" },
     // { label: "Bluesky",   href: "https://bsky.app/profile/you.bsky.social",  icon: "bluesky" },
@@ -51,15 +53,32 @@ export const projectCategories: ProjectCategory[] = [
       {
         title: "UNDP WasteWatch",
         href: "https://github.com/Team2-UNDP/.github",
-        description: "A full-stack web application designed to track, predict, and simulate trash movement and accumulation Davao Golf. \n\nBuilt with Python, FastAPI, Raspberry Pi4, YOLO11, and MongoDB.",
-        tags: ["FastAPI", "Object Detection", "MongoDB", "Raspberry Pi"],
+        description: "A full-stack web app designed to track, predict, and simulate trash movement and accumulation Davao Golf. \n\nBuilt with Python, FastAPI, Raspberry Pi4, YOLO11, and MongoDB.",
+        tags: ["FastAPI", "Object Detection", "MongoDB", "Data Analysis & Visualization"],
         banner: undp_banner,
+      },
+      {
+        title: "IsdaKnow",
+        href: "#",
+        description: "An AI-Powered web app that identify fish specied by uploading a fish image or via realtime web camera. \n\nBuilt with YOLOv8, Flask, and OpenCV",
+        tags: ["Image Classification", "AI", "Flask", "Data Cleaning & Annotation"],
+        banner: isdaknow_banner,
+        badge: "Undeployed",
+      },
+      {
+        title: "MCIIS DMS",
+        href: "#",
+        description: "A Document Management System for Mindanao Center for Informatics and Intelligent Systems (MCIIS) which allows users to manage and track documents digitally. \n\nBuilt with PHP, HTML, CSS, and JavaScript.",
+        tags: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
+        banner: mciis_banner,
       },
       {
         title: "Portfolio Site",
         href: "https://seventeen-portfolio.vercel.app/",
         description: "This portfolio! Built with React and TypeScript.",
         tags: ["React", "TypeScript", "Tailwind"],
+        // banner: portfolio_banner,
+        badge: "WIP",
       },
     ],
   },
@@ -67,33 +86,14 @@ export const projectCategories: ProjectCategory[] = [
     emoji: "🎮",
     title: "Game Projects",
     projects: [
-      {
-        title: "Cool Indie Game",
-        href: "https://yourusername.itch.io/cool-indie-game",
-        description: "A 2D puzzle platformer made with Godot.",
-        tags: ["Godot", "GDScript"],
-        banner: "",
-        badge: "WIP",
-      },
+      // TO BE ADDED IN THE FUTURE
     ],
   },
   {
     emoji: "📦",
     title: "Packages / Libraries",
     projects: [
-      {
-        title: "my-cool-lib",
-        href: "https://github.com/yourusername/my-cool-lib",
-        description: "A lightweight utility library for Node.js.",
-        tags: ["Node.js", "TypeScript"],
-      },
-      {
-        title: "another-fork",
-        href: "https://github.com/yourusername/another-fork",
-        description: "My fork of a popular library with extra features.",
-        isFork: true,
-        tags: ["JavaScript"],
-      },
+      // TO BE ADDED IN THE FUTURE
     ],
   },
   {
@@ -101,36 +101,31 @@ export const projectCategories: ProjectCategory[] = [
     title: "Tools & CLI",
     projects: [
       {
-        title: "dev-toolkit",
-        href: "https://github.com/yourusername/dev-toolkit",
-        description: "A collection of CLI tools for developer productivity.",
-        tags: ["Rust", "CLI"],
+        title: "CoinPH Trading Bot",
+        href: "#",
+        description: "A simple trading bot that interacts with the CoinPH API to execute basic trading strategies. \n\nBuilt with Python and the CoinPH API.",
+        tags: ["Python", "CoinPH API", "Basic Trading Algorithms"],
       },
+      {
+        title: "Dota 2 Match Prediction CLI",
+        href: "#",
+        description: "A simple command-line tool that predicts the outcome of Dota 2 matches based on team compositions and historical data. \n\nBuilt with Python and the OpenDota API.",
+        tags: ["Python", "OpenDota API", "XGBoost", "Data Analysis", "Machine Learning" ],
+      }
     ],
   },
   {
     emoji: "📄",
     title: "Papers & Research",
     projects: [
-      {
-        title: "My Research Paper",
-        href: "https://example.com/paper",
-        description: "Research on machine learning applied to creative domains.",
-        badge: "NeurIPS 2024",
-        banner: "",
-      },
+      // TO BE ADDED In THE FUTURE
     ],
   },
   {
     emoji: "✨",
     title: "Misc",
     projects: [
-      {
-        title: "Homelab / Network",
-        href: "https://github.com/yourusername/homelab",
-        description: "My homelab setup for self-hosting and experimentation.",
-        tags: ["Linux", "Docker", "Networking"],
-      },
+      // TO BE ADDED IN THE FUTURE
     ],
   },
 ];
@@ -145,9 +140,9 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  { date: "Mar 10, 2025", title: "How I built my homelab with Raspberry Pi and Docker", href: "https://yourblog.com/homelab-setup" },
-  { date: "Jan 22, 2025", title: "Getting started with Rust for web developers",        href: "https://yourblog.com/rust-for-web-devs" },
-  { date: "Dec 5, 2024",  title: "My 2024 year in review",                              href: "https://yourblog.com/2024-review" },
+  // { date: "Mar 10, 2025", title: "How I built my homelab with Raspberry Pi and Docker", href: "https://yourblog.com/homelab-setup" },
+  // { date: "Jan 22, 2025", title: "Getting started with Rust for web developers",        href: "https://yourblog.com/rust-for-web-devs" },
+  // { date: "Dec 5, 2024",  title: "My 2024 year in review",                              href: "https://yourblog.com/2024-review" },
 ];
 
 // ============================================================
@@ -165,7 +160,7 @@ export const friends: Friend[] = [
 ];
 
 // ============================================================
-// 🔑 PUBLIC KEYS
+// 🔑 PUBLIC KEYS [SOON]
 // ============================================================
 export interface PublicKey {
   label: string;
