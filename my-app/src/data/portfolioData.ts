@@ -9,6 +9,7 @@ import des_avatar     from "../assets/des_avatar.jpg"; // Friend's Avatar
 import undp_banner     from "../assets/undp_banner.png"; // Project Banner
 import mciis_banner    from "../assets/mciis_banner.png"; // Project Banner
 import isdaknow_banner from "../assets/isdaknow_banner.png"; // Project Banner
+import dengueph_banner from "../assets/dengueph_banner.png"; // Project Banner
 
 export const profile = {
   name: "Seventeen",
@@ -59,6 +60,12 @@ export const projectCategories: ProjectCategory[] = [
         banner: undp_banner,
         badge: "United Nations Development Programme 2025 Challenge",
       },
+      // {
+      //   title: "Davao City COVID-19 Dashboard",
+      //   href: "https://matthew-usep.shinyapps.io/davaocovid19dashboard/",
+      //   description: "An interactive dashboard built with R and Shiny that visualizes COVID-19 trends in Davao City. \n\nFeatures include time series analysis, heatmaps, and predictive modeling to identify high-risk areas.",
+      //   tags: ["Shiny", "Markdown", "R", "Data Analysis & Visualization", "Data Cleaning"],
+      // },
       {
         title: "IsdaKnow",
         href: "#",
@@ -73,6 +80,13 @@ export const projectCategories: ProjectCategory[] = [
         description: "A Document Management System for Mindanao Center for Informatics and Intelligent Systems (MCIIS) which allows users to manage and track documents digitally. \n\nBuilt with PHP, HTML, CSS, and JavaScript.",
         tags: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
         banner: mciis_banner,
+      },
+      {
+        title: "DenguePH",
+        href: "https://matthew-usep.shinyapps.io/DenguePHDashboard/",
+        description: "An interactive dashboard built with R and Shiny that visualizes dengue fever trends in the Philippines. \n\nFeatures include time series analysis, heatmaps, and predictive modeling to identify high-risk areas.",
+        tags: ["Shiny", "Markdown", "R", "Data Analysis & Visualization", "Data Cleaning"],
+        banner: dengueph_banner
       },
       {
         title: "Portfolio Site",
