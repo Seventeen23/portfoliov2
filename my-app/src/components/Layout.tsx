@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { profile } from "../data/portfolioData";
-import { SocialIcon, SunIcon, MoonIcon } from "./Icons";
+// import { SocialIcon, SunIcon, MoonIcon } from "./Icons";
+import { Analytics } from "@vercel/analytics/react";
 
 // ─── Scroll Reveal (exported for use in pages) ─────────────────────
 export const Reveal: React.FC<{ children: React.ReactNode; delay?: number }> = ({ children, delay = 0 }) => {
@@ -76,6 +77,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0e0e11] text-white/90 transition-colors duration-300">
+      <Analytics />
       {/* Nav */}
       <header className="sticky top-0 z-50 flex items-center justify-between h-[52px] px-6 bg-[#0e0e11]/90 backdrop-blur-xl border-b border-white/[0.07]"
         style={{ paddingLeft: "max(24px, calc((100% - 820px) / 2))", paddingRight: "max(24px, calc((100% - 820px) / 2))" }}

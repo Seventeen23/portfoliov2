@@ -4,11 +4,12 @@
 // ============================================================
 import React, { useState } from "react";
 import { blogPosts } from "../data/portfolioData";
-import { PageTitle, Reveal } from "../components/Layout";
+import { Reveal } from "../components/Layout";
 
 const PostsPage: React.FC = () => {
-  const allTags = Array.from(new Set(blogPosts.flatMap(p => p.tags ?? [])));
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  // const allTags = Array.from(new Set(blogPosts.flatMap(p => p.tags ?? [])));
+  // const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [activeTag] = useState<string | null>(null);
   const filtered = activeTag ? blogPosts.filter(p => p.tags?.includes(activeTag)) : blogPosts;
 
   return (

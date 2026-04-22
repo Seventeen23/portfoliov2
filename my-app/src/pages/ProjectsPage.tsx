@@ -4,7 +4,7 @@
 // ============================================================
 import React from "react";
 import { projectCategories } from "../data/portfolioData";
-import { PageTitle, Reveal } from "../components/Layout";
+import { Reveal } from "../components/Layout";
 import { CategorySection } from "../components/ProjectCard";
 
 const ProjectsPage: React.FC = () => (

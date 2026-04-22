@@ -2,9 +2,10 @@
 // 🙋 ABOUT PAGE
 // ============================================================
 import React from "react";
-import { profile } from "../data/portfolioData";
-import { SocialIcon } from "../components/Icons";
-import { PageTitle, Reveal } from "../components/Layout";
+// import { profile } from "../data/portfolioData";
+// import { SocialIcon } from "../components/Icons";
+// import { PageTitle, Reveal } from "../components/Layout";
+import { Reveal } from "../components/Layout";
 
 const AboutPage: React.FC = () => (
   <>

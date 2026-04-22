@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { profile, projectCategories, blogPosts, friends } from "../data/portfolioData";
 import { SocialIcon } from "../components/Icons";
-import { Reveal, CopyButton } from "../components/Layout";
+// import { Reveal, CopyButton } from "../components/Layout";
+import { Reveal } from "../components/Layout";
 import { CategorySection } from "../components/ProjectCard";
 
 // ─── Friend Avatar Chip ────────────────────────────────────────────
