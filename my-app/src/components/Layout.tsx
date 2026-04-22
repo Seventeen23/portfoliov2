@@ -65,7 +65,8 @@ export const navLinks = [
 
 // ─── Layout ────────────────────────────────────────────────────────
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [dark, setDark] = useState(true);
+  // const [dark, setDark] = useState(true);
+  const [dark] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
