@@ -2,14 +2,17 @@
 // 🎨 PORTFOLIO DATA — Edit everything here!
 // ============================================================
 
-import avatar         from "../assets/avatar.png"; // Profile Picture
-import giver_avatar   from "../assets/giver_avatar.png"; // Friend's Avatar
-import des_avatar     from "../assets/des_avatar.jpg"; // Friend's Avatar
+import avatar         from "../assets/avatars/avatar.png"; // Profile Picture
+import giver_avatar   from "../assets/avatars/giver_avatar.png"; // Friend's Avatar
+import des_avatar     from "../assets/avatars/des_avatar.jpg"; // Friend's Avatar
+import pj_avatar      from "../assets/avatars/pj_avatar.jpg"; // Friend's Avatar
 
-import undp_banner     from "../assets/undp_banner.png"; // Project Banner
-import mciis_banner    from "../assets/mciis_banner.png"; // Project Banner
-import isdaknow_banner from "../assets/isdaknow_banner.png"; // Project Banner
-import dengueph_banner from "../assets/dengueph_banner.png"; // Project Banner
+import undp_banner     from "../assets/banners/undp_banner.png"; // Project Banner
+import mciis_banner    from "../assets/banners/mciis_banner.png"; // Project Banner
+import isdaknow_banner from "../assets/banners/isdaknow_banner.png"; // Project Banner
+import dengueph_banner from "../assets/banners/dengueph_banner.png"; // Project Banner
+import gards_banner    from "../assets/banners/gards_banner.png"; // Project Banner
+import robotskie_banner from "../assets/banners/robotskie_banner.png"; // Project Banner
 
 export const profile = {
   name: "Seventeen",
@@ -60,12 +63,22 @@ export const projectCategories: ProjectCategory[] = [
         banner: undp_banner,
         badge: "United Nations Development Programme 2025 Challenge",
       },
-      // {
-      //   title: "Davao City COVID-19 Dashboard",
-      //   href: "https://matthew-usep.shinyapps.io/davaocovid19dashboard/",
-      //   description: "An interactive dashboard built with R and Shiny that visualizes COVID-19 trends in Davao City. \n\nFeatures include time series analysis, heatmaps, and predictive modeling to identify high-risk areas.",
-      //   tags: ["Shiny", "Markdown", "R", "Data Analysis & Visualization", "Data Cleaning"],
-      // },
+      {
+        title: "GARDS: NASA Space Knowledge Engine",
+        href: "https://gard-nasa-hackathon.vercel.app/",
+        description: "An AI-powered repository equipped with a search engine using NLP, clustering, and embeddings. \n\nDeveloped during the NASA Space Apps Challenge 2024 and Built with FastAPI, React, LMStudio, and Gemini.",
+        tags: ["NLP", "Python", "React", "Search Engine", "Prompt Engineering"],
+        banner: gards_banner,
+        badge: "NASA Space Apps Challenge 2024",
+      },
+      {
+        title: "RobotSkie",
+        href: "https://robot-skie.vercel.app/",
+        description: "An AI-powered web app for predicting Dota 2 tournament matches. Worked on as a side project with passion with analyzing dota 2 matches. Planning to add GPT wrapper soon!!! \n\nBuilt with FastAPI and React.",
+        tags: ["React", "Prediction", "Machine Learning", "Dota 2"],
+        banner: robotskie_banner,
+        badge: "WIP",
+      },
       {
         title: "IsdaKnow",
         href: "#",
@@ -127,7 +140,13 @@ export const projectCategories: ProjectCategory[] = [
         href: "#",
         description: "A simple command-line tool that predicts the outcome of Dota 2 matches based on team compositions and historical data. \n\nBuilt with Python and the OpenDota API.",
         tags: ["Python", "OpenDota API", "XGBoost", "Data Analysis", "Machine Learning" ],
-      }
+      },
+      {
+        title: "DavaoFare Guide",
+        href: "#",
+        description: "A offline mobile applcation that calculate fare estimates for different jeepney routes in Davao City.",
+        tags: ["Android Studio", "Java", "Mobile"],
+      },
     ],
   },
   {
@@ -159,12 +178,18 @@ export interface BlogPost {
   date: string;
   title: string;
   href: string;
+  tags?: string[];
+  excerpt?: string;
 }
 
 export const blogPosts: BlogPost[] = [
-  // { date: "Mar 10, 2025", title: "How I built my homelab with Raspberry Pi and Docker", href: "https://yourblog.com/homelab-setup" },
-  // { date: "Jan 22, 2025", title: "Getting started with Rust for web developers",        href: "https://yourblog.com/rust-for-web-devs" },
-  // { date: "Dec 5, 2024",  title: "My 2024 year in review",                              href: "https://yourblog.com/2024-review" },
+  // {
+  //   date: "Mar 10, 2025",
+  //   title: "How I built my homelab with Raspberry Pi and Docker",
+  //   href: "https://yourblog.com/homelab-setup",
+  //   tags: ["homelab", "docker", "linux"],
+  //   excerpt: "A walkthrough of my self-hosted setup — from hardware choices to container orchestration.",
+  // },
 ];
 
 // ============================================================
@@ -174,23 +199,14 @@ export interface Friend {
   name: string;
   href: string;
   avatar: string;
+  bio?: string;
 }
 
 export const friends: Friend[] = [
-  { name: "Giver", href: "https://giverphine-portfolio.vercel.app/", avatar: giver_avatar },
+  { name: "Giver", href: "https://giverphine-portfolio.vercel.app/", avatar: giver_avatar, bio: "Aspiring software developer and fellow Davaoeno! Check out my portfolio to see my projects and skills." },
   { name: "Hans", href: "#", avatar: "" },
-  { name: "Dessy", href: "https://desireeportfolio.vercel.app/", avatar: des_avatar },
+  { name: "Dessy", href: "https://desireeportfolio.vercel.app/", avatar: des_avatar,  },
+  { name: "PJ", href: "http://pjlln.me/portfolio/", avatar: pj_avatar, },
 ];
 
-// ============================================================
-// 🔑 PUBLIC KEYS [SOON]
-// ============================================================
-export interface PublicKey {
-  label: string;
-  value: string;
-  downloadHref?: string;
-}
 
-export const publicKeys: PublicKey[] = [
-  { label: "PGP", value: "XXXX XXXX XXXX XXXX", downloadHref: "/yourname.asc" },
-];
