@@ -21,7 +21,7 @@ export const profile = {
   tagline: "Full-stack & Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
   avatar: avatar, // URL to your avatar image, leave empty for initials fallback
   socials: [
-    { label: "Resume",    href: "/resume.pdf",                                icon: "resume",     download: true },
+    { label: "Resume",    href: "/Resume.pdf",                                icon: "resume",     download: true },
     { label: "GitHub",    href: "https://github.com/Seventeen23",             icon: "github"  },
     { label: "Twitter",   href: "https://x.com/MatthewTanutan",               icon: "twitter" },
     // { label: "Bluesky",   href: "https://bsky.app/profile/you.bsky.social",  icon: "bluesky" },
