@@ -206,7 +206,7 @@ export const friends: Friend[] = [
   { name: "Giver", href: "https://giverphine-portfolio.vercel.app/", avatar: giver_avatar, bio: "Aspiring software developer and fellow Davaoeno! Check out my portfolio to see my projects and skills." },
   { name: "Hans", href: "#", avatar: "" },
   { name: "Dessy", href: "https://desireeportfolio.vercel.app/", avatar: des_avatar,  },
-  { name: "PJ", href: "http://pjlln.me/portfolio/", avatar: pj_avatar, },
+  { name: "PJ", href: "https://www.pjlln.me/", avatar: pj_avatar, },
 ];
 
 
