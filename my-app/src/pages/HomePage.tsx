@@ -60,6 +60,10 @@ const Avatar: React.FC<{ src: string; name: string }> = ({ src, name }) => {
   );
 };
 
+// ─── Featured categories shown on the homepage preview ────────────
+const FEATURED_CATEGORIES = ["Web Projects", "Tools & CLI", "Papers & Research"];
+const featuredCategories = projectCategories.filter(c => FEATURED_CATEGORIES.includes(c.title));
+
 const HomePage: React.FC = () => (
   <>
     {/* Hero */}
@@ -124,18 +128,16 @@ const HomePage: React.FC = () => (
           <Link to="/projects" className="text-[13px] text-violet-400/60 hover:text-violet-400 transition-colors">View all →</Link>
         </div>
       </Reveal>
-      {projectCategories
-        .filter((_, idx) => [0, 3, 4].includes(idx))
-        .map((cat, i) => (
+{featuredCategories.map((cat, i) => (
           <Reveal key={cat.title} delay={i * 40}>
             <CategorySection {...cat} />
           </Reveal>
-      ))}
-      {projectCategories.length > 3 && (
+        ))}
+      {projectCategories.length > featuredCategories.length && (
         <Reveal delay={120}>
           <Link to="/projects"
             className="mt-2 flex items-center justify-center gap-2 py-3 rounded-xl border border-white/[0.07] hover:border-violet-400/30 text-[13px] text-white/30 hover:text-violet-400 hover:bg-violet-400/5 transition-all">
-            View {projectCategories.length - 3} more categories →
+            View {projectCategories.length - featuredCategories.length} more categories →
           </Link>
         </Reveal>
       )}

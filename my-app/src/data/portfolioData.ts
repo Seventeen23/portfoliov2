@@ -123,6 +123,34 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
+    emoji: "🤖",
+    title: "AI & Machine Learning",
+    projects: 
+    [
+      {
+        title: "Choco - Personal Agentic Assistant",
+        href: "https://github.com/Seventeen23/choco",
+        description: "A personal agentic assistant that plans and executes multi-step tasks on your behalf through an LLM-driven tool-calling loop, running locally from the command line. \n\nBuilt with Python and LLM tooling.",
+        // banner: choco_banner,
+        tags: ["Python", "LLM", "Agentic AI"],
+      },
+    ],
+  },
+  {
+    emoji: "📱",
+    title: "Android Applications",
+    projects: [
+      {
+        title: "DavaoFare Guide",
+        href: "https://github.com/Seventeen23/DavaoFareGuide",
+        description: "An offline mobile application that calculates fare estimates for different jeepney routes in Davao City.",
+        tags: ["Android Studio", "Java", "Mobile"],
+        banner: davaofare_banner,
+        badge: "WIP & PET",
+      },
+    ],
+  },
+  {
     emoji: "🎮",
     title: "Game Projects",
     projects: [
@@ -151,14 +179,6 @@ export const projectCategories: ProjectCategory[] = [
         href: "#",
         description: "A simple command-line tool that predicts the outcome of Dota 2 matches based on team compositions and historical data. \n\nBuilt with Python and the OpenDota API.",
         tags: ["Python", "OpenDota API", "XGBoost", "Data Analysis", "Machine Learning" ],
-      },
-      {
-        title: "DavaoFare Guide",
-        href: "https://github.com/Seventeen23/DavaoFareGuide",
-        description: "A offline mobile applcation that calculate fare estimates for different jeepney routes in Davao City.",
-        tags: ["Android Studio", "Java", "Mobile"],
-        banner: davaofare_banner,
-        badge: "WIP & PET",
       },
     ],
   },
