@@ -13,6 +13,8 @@ import isdaknow_banner from "../assets/banners/isdaknow_banner.png"; // Project 
 import dengueph_banner from "../assets/banners/dengueph_banner.png"; // Project Banner
 import gards_banner    from "../assets/banners/gards_banner.png"; // Project Banner
 import robotskie_banner from "../assets/banners/robotskie_banner.png"; // Project Banner
+import gumzy_banner    from "../assets/banners/gumzy_banner.png"; // Project Banner
+import davaofare_banner from "../assets/banners/davaofare_banner.png"; // Project Banner
 
 export const profile = {
   name: "Seventeen",
@@ -71,13 +73,22 @@ export const projectCategories: ProjectCategory[] = [
         banner: gards_banner,
         badge: "NASA Space Apps Challenge 2024",
       },
+
+      {
+        title: "Gumzy",
+        href: "https://gumzy.vercel.app/",
+        description: "A small e-commerce platform for buying and selling products. \n\nBuilt with FastAPI & React.",
+        tags: ["FastAPI", "React", "E-commerce"],
+        banner: gumzy_banner,
+        badge: "Freelance",
+      },
+
       {
         title: "RobotSkie",
         href: "https://robot-skie.vercel.app/",
         description: "An AI-powered web app for predicting Dota 2 tournament matches. Worked on as a side project with passion with analyzing dota 2 matches. Planning to add GPT wrapper soon!!! \n\nBuilt with FastAPI and React.",
         tags: ["React", "Prediction", "Machine Learning", "Dota 2"],
         banner: robotskie_banner,
-        badge: "WIP",
       },
       {
         title: "IsdaKnow",
@@ -143,9 +154,11 @@ export const projectCategories: ProjectCategory[] = [
       },
       {
         title: "DavaoFare Guide",
-        href: "#",
+        href: "https://github.com/Seventeen23/DavaoFareGuide",
         description: "A offline mobile applcation that calculate fare estimates for different jeepney routes in Davao City.",
         tags: ["Android Studio", "Java", "Mobile"],
+        banner: davaofare_banner,
+        badge: "WIP & PET",
       },
     ],
   },
