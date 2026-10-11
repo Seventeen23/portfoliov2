@@ -20,7 +20,7 @@ export const profile = {
   name: "Seventeen",
   displayNames: ["Matthew Feri Tanutan (en)","Seventeen (en)", "実佳 (jp)"],
   pronouns: "(He/Him)",
-  tagline: "Full-stack & Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
+  tagline: "Full-stack | Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
   avatar: avatar, // URL to your avatar image, leave empty for initials fallback
   socials: [
     { label: "Resume",    href: "/Resume.pdf",                                icon: "resume",     download: true },
@@ -87,14 +87,14 @@ export const projectCategories: ProjectCategory[] = [
         title: "RobotSkie",
         href: "https://robot-skie.vercel.app/",
         description: "An AI-powered web app for predicting Dota 2 tournament matches. Worked on as a side project with passion with analyzing dota 2 matches. Planning to add GPT wrapper soon!!! \n\nBuilt with FastAPI and React.",
-        tags: ["React", "Prediction", "Machine Learning", "Dota 2"],
+        tags: ["React", "Prediction", "Machine Learning", "XGBoost", "Dota 2"],
         banner: robotskie_banner,
       },
       {
         title: "IsdaKnow",
         href: "#",
         description: "An AI-Powered web app that identifies fish species by uploading a fish image or via realtime web camera. Also won 3rd Place in the InnoFiesta 2024: AI and Data Science Competition. \n\nBuilt with YOLOv8, Flask, and OpenCV",
-        tags: ["Image Classification", "AI", "Flask", "Data Cleaning & Annotation"],
+        tags: ["Image Classification", "AI", "YOLO", "Flask", "Data Cleaning & Annotation"],
         banner: isdaknow_banner,
         badge: "Undeployed",
       },
@@ -125,14 +125,20 @@ export const projectCategories: ProjectCategory[] = [
   {
     emoji: "🤖",
     title: "AI & Machine Learning",
-    projects: 
-    [
+    projects: [
+      {
+        title: "Candy Eye - Lightweight Object Detection Model",
+        href: "https://github.com/Seventeen23/CandyEye",
+        description: "A lightweight object detection cpu first model implemented in Python from scratch.",
+        tags: ["Python", "CPU First Computing", "Computer Vision", "Optimization"],
+        badge: "WIP & PET",
+      },
       {
         title: "Choco - Personal Agentic Assistant",
         href: "https://github.com/Seventeen23/choco",
         description: "A personal agentic assistant that plans and executes multi-step tasks on your behalf through an LLM-driven tool-calling loop, running locally from the command line. \n\nBuilt with Python and LLM tooling.",
         // banner: choco_banner,
-        tags: ["Python", "LLM", "Agentic AI"],
+        tags: ["Python", "LLM", "Agentic AI", "Prompt Engineering"],
       },
     ],
   },
@@ -161,7 +167,13 @@ export const projectCategories: ProjectCategory[] = [
     emoji: "📦",
     title: "Packages / Libraries",
     projects: [
-      // TO BE ADDED IN THE FUTURE
+      {
+        title: "Candy Eye - Lightweight Object Detection Model",
+        href: "https://github.com/Seventeen23/CandyEye",
+        description: "A lightweight object detection cpu first model implemented in Python from scratch.",
+        tags: ["Python", "CPU First Computing", "Computer Vision", "Optimization"],
+        badge: "WIP & PET",
+      }
     ],
   },
   {
