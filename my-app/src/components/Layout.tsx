@@ -55,7 +55,7 @@ export const CopyButton: React.FC<{ text: string }> = ({ text }) => {
 };
 
 // ─── Nav links config — ADD NEW PAGES HERE ─────────────────────────
-export const navLinks = [
+const navLinks: { to: string; label: string }[] = [
   { to: "/",            label: "home"     },
   { to: "/projects",   label: "projects" },
   { to: "/posts",      label: "posts"    },

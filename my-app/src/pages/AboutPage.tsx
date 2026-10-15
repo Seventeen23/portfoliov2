@@ -2,234 +2,328 @@
 // 🙋 ABOUT PAGE
 // ============================================================
 import React from "react";
-// import { profile } from "../data/portfolioData";
-// import { SocialIcon } from "../components/Icons";
-// import { PageTitle, Reveal } from "../components/Layout";
+import { profile } from "../data/portfolioData";
+import { SocialIcon } from "../components/Icons";
 import { Reveal } from "../components/Layout";
+
+// ─── Stats strip ───────────────────────────────────────────────────
+const stats = [
+  { value: "15+",     label: "projects shipped across 7 categories" },
+  { value: "2",       label: "global challenges — NASA Space Apps & UNDP" },
+  { value: "3rd",     label: "place, InnoFiesta 2024 AI & Data Science" },
+  { value: "Sept 2026", label: "graduating — open to opportunities" },
+];
+
+// ─── Focus areas ───────────────────────────────────────────────────
+const focusAreas = [
+  {
+    emoji: "🧱",
+    title: "Full-stack Engineering",
+    blurb: "Scalable backends in FastAPI and Django, typed React front ends, and the API contracts that hold them together. I like owning a feature from database schema to the pixel.",
+    chips: ["FastAPI", "Django", "React", "TypeScript", "PostgreSQL"],
+  },
+  {
+    emoji: "🧠",
+    title: "ML & Computer Vision",
+    blurb: "Models that ship — YOLO detectors trained, validated, and deployed onto actual hardware at the edge. Annotation pipelines, evaluation, and the boring data quality work that makes accuracy possible.",
+    chips: ["YOLO", "PyTorch", "OpenCV", "XGBoost", "NLP"],
+  },
+  {
+    emoji: "📊",
+    title: "Data Science & Visualization",
+    blurb: "From messy raw data to a dashboard a stakeholder can read in five seconds. Time series, heatmaps, network analysis, and honest interpretation of what the numbers actually say.",
+    chips: ["R", "Shiny", "Tableau", "PowerBI", "Pandas"],
+  },
+];
+
+// ─── Experience ────────────────────────────────────────────────────
+const experience = [
+  {
+    role: "Software Developer Intern",
+    org: "Southern Philippines Medical Center (SPMC) — Davao City",
+    meta: "July 2025 – August 2025",
+    points: [
+      "Owned backend development on the hospital's payroll system — designing and building APIs, shaping database structures, and keeping data flowing correctly between system components.",
+      "Shipped inside a real production environment where incorrect data isn't a bug ticket, it's someone's salary.",
+      "Walked out with hardened instincts for backend architecture, API design, and code that has to be right.",
+    ],
+  },
+  {
+    role: "AI Developer Lead",
+    org: "United Nations Development Programme (UNDP) — Davao City",
+    meta: "March 2025 – June 2025",
+    points: [
+      "Led the AI side of a UNDP project: satellite data analysis and a prediction pipeline for marine trash movement.",
+      "Built and led the annotation team — wrote the guidelines, trained members, and enforced data quality across the dataset.",
+      "Owned training, evaluation, and validation of the YOLO-based detection model end to end.",
+      "Grew just as much in leadership as in machine learning: shipping a team's work is its own discipline.",
+    ],
+  },
+  {
+    role: "Freelance Developer / Data Assistant",
+    org: "Remote / Project-Based",
+    meta: "2024 – Present",
+    points: [
+      "Delivered short-term projects for a rotating cast of clients: frontend fixes, automation, data encoding and cleaning, and product research.",
+      "Built simple AI workflow automations and untangled UI/CSS that nobody wanted to touch.",
+      "Trained myself to scope fast, communicate clearly, and deliver under ambiguous, fast-moving briefs.",
+    ],
+  },
+];
+
+// ─── Education ─────────────────────────────────────────────────────
+const education = [
+  {
+    degree: "B.S. Computer Science — Major in Data Science",
+    school: "University of Southeastern Philippines, Obrero, Davao City",
+    meta: "Expected September 2026 · Dean's Lister",
+    points: [
+      "Coursework across programming paradigms, computer networks, data science, big data, and machine learning — the technical foundation under everything on this site.",
+      "Recognized as a Dean's Lister.",
+    ],
+  },
+  {
+    degree: "Senior High School — with Honors",
+    school: "AMA Computer College of Davao",
+    meta: "Graduated with honors",
+    points: [
+      "First real exposure to programming through Java, MySQL, and programming ethics — the spark that made computer science the obvious choice.",
+      "Since then: continuously building, shipping, and learning through projects instead of waiting to be taught.",
+    ],
+  },
+];
+
+// ─── Skills ────────────────────────────────────────────────────────
+const skillGroups = [
+  { emoji: "⌨️",  label: "Languages",        items: ["Python", "TypeScript", "JavaScript", "Java", "PHP", "R", "SQL"] },
+  { emoji: "🌐",  label: "Web & Backend",    items: ["React", "FastAPI", "Django", "Flask", "Tailwind CSS", "PostgreSQL", "MariaDB", "MongoDB"] },
+  { emoji: "🧠",  label: "AI & Machine Learning", items: ["Machine Learning", "PyTorch", "YOLO", "OpenCV", "XGBoost", "NLP", "Prompt Engineering"] },
+  { emoji: "📊",  label: "Data & Analytics", items: ["Data Analysis & Visualization", "Data Cleaning", "Tableau", "PowerBI", "Shiny"] },
+  { emoji: "🛠️",  label: "Tools & Infra",    items: ["Git", "Docker", "Linux", "Vercel", "Android Studio", "Raspberry Pi"] },
+];
+
+// ─── Interests ─────────────────────────────────────────────────────
+const interests = [
+  { emoji: "📺", label: "Anime / Manga / Manhua" },
+  { emoji: "🎮", label: "Video Games" },
+  { emoji: "♟️", label: "Chess" },
+  { emoji: "🕹️", label: "Game Development" },
+  { emoji: "👁️", label: "Computer Vision" },
+  { emoji: "🤖", label: "Machine Learning" },
+  { emoji: "🧩", label: "Web Development" },
+  { emoji: "🔐", label: "Cyber Security" },
+  { emoji: "⚡", label: "Pokémon" },
+];
+
+// ─── Contact cards ─────────────────────────────────────────────────
+const contacts = [
+  { label: "LinkedIn", value: "matthew-feri-tanutan", href: "https://www.linkedin.com/in/matthew-feri-tanutan-2676332a0/", icon: "linkedin" },
+  { label: "GitHub",   value: "github.com/Seventeen23", href: "https://github.com/Seventeen23", icon: "github" },
+  { label: "X / Twitter", value: "@MatthewTanutan", href: "https://x.com/MatthewTanutan", icon: "twitter" },
+  { label: "Email",    value: "matthewtanutan17@gmail.com", href: "mailto:matthewtanutan17@gmail.com", icon: "email" },
+];
+
+// ─── Shared section shell ──────────────────────────────────────────
+const Section: React.FC<{ emoji: string; title: string; delay?: number; children: React.ReactNode }> = ({ emoji, title, delay = 0, children }) => (
+  <Reveal delay={delay}>
+    <section className="pt-9">
+      <div className="flex items-center gap-2.5 mb-4">
+        <span className="text-lg">{emoji}</span>
+        <h2 className="font-display font-bold text-[17px] text-white/90">{title}</h2>
+        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
+      </div>
+      {children}
+    </section>
+  </Reveal>
+);
+
+// ─── Timeline item ─────────────────────────────────────────────────
+const TimelineItem: React.FC<{ title: string; subtitle: string; meta: string; points: string[]; last?: boolean }> = ({ title, subtitle, meta, points, last }) => (
+  <li className="relative pl-7 pb-7 last:pb-0">
+    {!last && <span className="absolute left-[5px] top-4 bottom-0 w-px bg-gradient-to-b from-violet-400/50 to-white/10" />}
+    <span className="absolute left-0 top-1.5 w-[11px] h-[11px] rounded-full bg-violet-400 ring-4 ring-violet-400/15 shadow-[0_0_12px_rgba(192,132,252,0.5)]" />
+    <div className="rounded-2xl border border-white/[0.07] bg-[#16161a] p-4 hover:border-violet-400/25 transition-colors">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <h3 className="font-display font-semibold text-[14.5px] text-white/90">{title}</h3>
+        <span className="font-mono text-[11px] text-violet-300/70">{meta}</span>
+      </div>
+      <p className="text-[12.5px] text-white/45 mt-0.5">{subtitle}</p>
+      <ul className="mt-3 space-y-2">
+        {points.map(p => (
+          <li key={p} className="flex gap-2.5 text-[13px] leading-relaxed text-white/55">
+            <span className="text-violet-400/70 mt-[3px] flex-shrink-0">▸</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </li>
+);
 
 const AboutPage: React.FC = () => (
   <>
-    {/* <PageTitle emoji="🙋" title="About Me" /> */}
-
-    {/* Intro */}
-    <Reveal delay={40}>
-      <div className="pt-8 pb-8 border-b border-white/[0.06] space-y-6">
-  
-      {/* Header */}
-      <div>
-        <h2 className="font-display font-bold text-[22px] text-violet-400 font-semibold mb-2">
-          🙋 About Me
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          Hiiii!, I’m Matthew Feri Tanutan I also go by Seventeen and this is my about me page where I share about myself a little bit. 
-        </p>
-        <br />
-        <p>
-          I am a Computer Science student with hands-on experience in full-stack web development and machine learning. 
-          I specialize in building scalable backend systems using Django and FastAPI.
-        </p>
-        <br />
-        <p>
-          Also, I am expected to graduate in September and am actively seeking opportunities where I can contribute, learn, and grow as a software developer.
-        </p>
-      </div>
-
-      {/* Interests */}
-      <div>
-        <h3 className="text-[22px] text-violet-400 font-semibold mb-2">
-          🎨 Interests
-        </h3>
-        <ul className="space-y-2">
-          <li>
-            • Anime/Manga/Manhua
-          </li>
-          <li>
-            • Video Games
-          </li>
-          <li>
-            • Chess
-          </li>
-          <li>
-            • Game Development
-          </li>
-          <li>
-            • Computer Vision
-          </li>
-          <li>
-            • Machine Learning
-          </li>
-          <li>
-            • Web Development
-          </li>
-          <li>
-            • Cyber Security
-          </li>
-          <li>
-            • Pokemon 
-          </li>
-        </ul>
-      </div>
-
-      {/* Education */}
-      <div>
-        <h3 className="text-[22px] text-violet-400 font-semibold mb-2">
-          🎓 Education
-        </h3>
-        <p>
-          I’m currently a Computer Science student at the University of Southeastern Philippines in Obrero, Davao City, 
-          where I’m taking up a major in Data Science and expecting to graduate in September 2026.
-          <br /> 
-          <br />
-          Throughout my studies, I’ve worked on subjects like programming paradigms, computer networks, data science, 
-          big data, and machine learning, which helped me build a strong technical foundation. I’ve also been recognized 
-          as a Dean’s Lister.
-          <br />
-          <br />
-          Before that, I studied at AMA Computer College of Davao for my senior highschool year, where I got my early exposure 
-          to programming through Java, MySQL, and programming ethics. That experience really sparked my interest in tech and 
-          pushed me to pursue computer science. I graduated with honors, and since then, I’ve been continuously building my 
-          skills through projects and hands-on learning.
-        </p>
-      </div>
-
-      {/* Experience */}
-      <div>
-        <h3 className="text-[22px] text-violet-400 font-semibold mb-2">
-          🕒 Experience
-        </h3>
-        <ul className="space-y-7">
-          <li>
-            <p className="text-[17px] text-violet-400 font-semibold mb-2">
-              • Software Developer Intern
-              </p>
-            <p className="text-[14px] text-white/50 mb-2">
-              Southern Philippines Medical Center (SPMC) - Davao City, Philippines
-              <br />
-              July 2025 - August 2025
-            </p>
-            <p>
-              During my internship at SPMC, I worked on enhancing the hospital’s payroll system. I was responsible for backend 
-              development, including designing and building APIs, managing database structures, and ensuring smooth data flow 
-              between the system components. 
-              <br />
-              <br />
-              This experience strengthened my skills in backend architecture, API development, 
-              and working within a real-world production environment.
-            </p>
-          </li>
-          <li>
-            <p className="text-[17px] text-violet-400 font-semibold mb-2">
-              • AI Developer Lead
-              </p>
-            <p className="text-[14px] text-white/50  mb-2">
-              United Nation Development Programme (UNDP) - Davao City, Philippines
-              <br />
-              March 2025 - June 2025
-            </p>
-            <p>
-              As the AI Developer Lead for the UNDP project, I worked on analyzing satellite data and building a prediction 
-              pipeline for marine trash movement. I led a small team where I trained members on dataset annotation and ensured 
-              data quality. I also handled the training, evaluation, and validation of a YOLO-based model used in the project. 
-              <br />
-              <br />
-              This role helped me develop both my technical expertise in machine learning and my leadership skills in managing 
-              a team.
-            </p>
-          </li>
-          <li>
-            <p className="text-[17px] text-violet-400 font-semibold mb-2">
-              • Freelance Developer / Data Assistant
-            </p>
-            <p className="text-[14px] text-white/50  mb-2">
-              Remote / Project-Based
-              <br />
-              2024 – Present
-            </p>
-            <p>
-              Worked on short-term freelance projects for various clients, focusing on frontend fixes, automation, and data-related tasks. 
-              Contributions included resolving UI and CSS issues, building simple AI workflow automations, performing data encoding and cleaning, 
-              and conducting product research. These projects helped me develop adaptability and the ability to 
-              quickly deliver solutions in fast-paced, real-world scenarios.
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      {/* Skills */}
-      <div>
-        <h3 className="text-[22px] text-violet-400 font-semibold mb-2">
-          🧠 Skills
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {["Python", "React", "Django", "Machine Learning", "TypeScript", "FastAPI", "PostgreSQL", 
-          "SQL", "MariaDB", "Git", "Flask", "Docker", "R", "PyTorch", "Tableau", "PowerBI", "Linux",
-          "PHP", "Java", "JavaScript"
-          ].map(skill => (
-            <span
-              key={skill}
-              className="px-2.5 py-1 text-[12px] rounded-full bg-white/[0.05] text-white/50 border border-white/[0.07]"
-            >
-              {skill}
-            </span>
-          ))}
+    {/* ── Hero ── */}
+    <Reveal>
+      <section className="pt-10 pb-8">
+        <div className="flex items-start gap-3 mb-4">
+          <span className="text-2xl">🙋</span>
+          <h1 className="font-display font-bold text-[clamp(22px,5vw,28px)] text-white/90">About Me</h1>
         </div>
-      </div>
 
-      {/* Links */}
-      <div>
-        <h3 className="text-[22px] text-violet-400 font-semibold mb-2 mt-12">
-          📞 Contact me Through My Links
-        </h3>
-        <ul className="space-y-2">
-          <li>
-            • LinkedIn:{" "}
-            <a
-              className="text-violet-400 underline hover:text-violet-300"
-              href="https://www.linkedin.com/in/matthew-feri-tanutan-2676332a0/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              matthew-feri-tanutan
-            </a>
-          </li>
+        <div className="rounded-2xl border border-white/[0.07] bg-gradient-to-br from-[#16161a] to-violet-500/[0.05] overflow-hidden">
+          <div className="h-20 bg-gradient-to-r from-violet-500/20 via-fuchsia-500/10 to-transparent" />
+          <div className="px-5 pb-5 -mt-9">
+            <div className="flex flex-wrap items-end gap-4">
+              <div className="w-[76px] h-[76px] rounded-2xl overflow-hidden border-2 border-white/15 ring-4 ring-violet-400/10 bg-[#16161a]">
+                <img src={profile.avatar} alt={profile.name} className="w-full h-full object-cover" />
+              </div>
+              <div className="min-w-0 pb-1">
+                <h2 className="font-display font-bold text-[20px] text-white/90 leading-tight">Matthew Feri Tanutan</h2>
+                <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+                  <span className="text-[11.5px] px-2 py-0.5 rounded bg-white/5 text-white/40">"Seventeen"</span>
+                  <span className="text-[11.5px] px-2 py-0.5 rounded bg-white/5 text-white/40">{profile.pronouns}</span>
+                  <span className="inline-flex items-center gap-1.5 text-[11.5px] px-2 py-0.5 rounded bg-emerald-400/10 text-emerald-300 border border-emerald-400/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    Open to opportunities
+                  </span>
+                </div>
+              </div>
+            </div>
 
-          <li>
-            • GitHub:{" "}
-            <a
-              className="text-violet-400 underline hover:text-violet-300"
-              href="https://github.com/Seventeen23"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github.com/Seventeen23
-            </a>
-          </li>
-
-          <li>
-            • Email:{" "}
-            <a
-              className="text-violet-400 underline hover:text-violet-300"
-              href="mailto:matthewtanutan17@gmail.com"
-            >
-              matthewtanutan17@gmail.com
-            </a>
-          </li>
-          <li>
-            • X:{" "}
-            <a
-              className="text-violet-400 underline hover:text-violet-300"
-              href="https://x.com/MatthewTanutan"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @MatthewTanutan
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
+            <p className="mt-4 text-[14.5px] leading-relaxed text-white/60">
+              Computer Science student at USeP majoring in <span className="text-violet-300">Data Science</span>, and a
+              full-stack developer who has shipped for the <span className="text-violet-300">United Nations</span>,
+              <span className="text-violet-300"> NASA's Space Apps</span>, and paying clients — often all before graduating.
+              I build backend systems that hold up, machine learning models that leave the notebook, and interfaces
+              people actually enjoy using.
+            </p>
+            <p className="mt-2.5 text-[14.5px] leading-relaxed text-white/60">
+              Graduating <span className="text-white/85">September 2026</span> and actively looking for a team where I can
+              contribute, learn loudly, and grow into the kind of engineer people remember.
+            </p>
+          </div>
+        </div>
+      </section>
     </Reveal>
+
+    {/* ── Stats ── */}
+    <Reveal delay={80}>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+        {stats.map(s => (
+          <div key={s.label} className="rounded-xl border border-white/[0.07] bg-[#16161a] px-3 py-3.5 text-center hover:border-violet-400/30 transition-colors">
+            <div className="font-display font-bold text-[19px] text-violet-400 leading-tight">{s.value}</div>
+            <div className="text-[11px] text-white/40 mt-1 leading-snug">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </Reveal>
+
+    {/* ── Focus areas ── */}
+    <Section emoji="🎯" title="What I Do" delay={40}>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+        {focusAreas.map(a => (
+          <div key={a.title} className="rounded-2xl border border-white/[0.07] bg-[#16161a] p-4 hover:border-violet-400/25 hover:-translate-y-0.5 transition-all duration-300">
+            <div className="text-xl mb-2">{a.emoji}</div>
+            <h3 className="font-display font-semibold text-[13.5px] text-white/90 mb-1.5">{a.title}</h3>
+            <p className="text-[12.5px] leading-relaxed text-white/45">{a.blurb}</p>
+            <div className="flex flex-wrap gap-1 mt-3">
+              {a.chips.map(c => (
+                <span key={c} className="text-[10.5px] px-2 py-0.5 rounded-full bg-violet-400/10 text-violet-300 font-mono">{c}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    {/* ── Experience ── */}
+    <Section emoji="🕒" title="Experience" delay={40}>
+      <ul>
+        {experience.map((e, i) => (
+          <TimelineItem
+            key={e.role}
+            title={e.role}
+            subtitle={e.org}
+            meta={e.meta}
+            points={e.points}
+            last={i === experience.length - 1}
+          />
+        ))}
+      </ul>
+    </Section>
+
+    {/* ── Education ── */}
+    <Section emoji="🎓" title="Education" delay={40}>
+      <ul>
+        {education.map((e, i) => (
+          <TimelineItem
+            key={e.degree}
+            title={e.degree}
+            subtitle={e.school}
+            meta={e.meta}
+            points={e.points}
+            last={i === education.length - 1}
+          />
+        ))}
+      </ul>
+    </Section>
+
+    {/* ── Skills ── */}
+    <Section emoji="🧠" title="Skills & Tooling" delay={40}>
+      <div className="flex flex-col gap-2.5">
+        {skillGroups.map(g => (
+          <div key={g.label} className="rounded-2xl border border-white/[0.07] bg-[#16161a] px-4 py-3.5 hover:border-violet-400/25 transition-colors">
+            <div className="flex items-center gap-2 mb-2.5">
+              <span className="text-[13px]">{g.emoji}</span>
+              <span className="font-display font-semibold text-[12.5px] text-white/80">{g.label}</span>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {g.items.map(s => (
+                <span key={s} className="text-[11.5px] px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/[0.07] text-white/60 hover:border-violet-400/40 hover:text-violet-300 hover:bg-violet-400/5 transition-all duration-200 cursor-default">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    {/* ── Interests ── */}
+    <Section emoji="🎨" title="Interests" delay={40}>
+      <div className="flex flex-wrap gap-2">
+        {interests.map(i => (
+          <span key={i.label} className="inline-flex items-center gap-1.5 text-[12.5px] px-3 py-1.5 rounded-full border border-white/[0.07] bg-[#16161a] text-white/55 hover:border-violet-400/35 hover:text-white/80 transition-all duration-200">
+            <span>{i.emoji}</span>
+            {i.label}
+          </span>
+        ))}
+      </div>
+    </Section>
+
+    {/* ── Contact ── */}
+    <Section emoji="📞" title="Get in Touch" delay={40}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        {contacts.map(c => (
+          <a
+            key={c.label}
+            href={c.href}
+            target={c.href.startsWith("mailto:") ? undefined : "_blank"}
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 rounded-2xl border border-white/[0.07] bg-[#16161a] px-4 py-3.5 hover:border-violet-400/40 hover:bg-violet-400/[0.05] transition-all duration-200 hover:-translate-y-0.5"
+          >
+            <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-white/[0.05] border border-white/[0.07] text-white/45 group-hover:text-violet-400 group-hover:border-violet-400/30 transition-colors">
+              <SocialIcon name={c.icon} />
+            </span>
+            <span className="min-w-0">
+              <span className="block text-[11px] uppercase tracking-[0.1em] text-white/30">{c.label}</span>
+              <span className="block text-[13px] text-white/70 truncate group-hover:text-violet-300 transition-colors">{c.value}</span>
+            </span>
+            <span className="ml-auto text-white/20 group-hover:text-violet-400 group-hover:translate-x-0.5 transition-all">→</span>
+          </a>
+        ))}
+      </div>
+    </Section>
   </>
 );
 

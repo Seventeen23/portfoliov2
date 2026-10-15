@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import { ProjectModalProvider } from "./components/ProjectModal";
 import HomePage     from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import PostsPage    from "./pages/PostsPage";
@@ -19,16 +20,18 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 const App: React.FC = () => (
   <BrowserRouter>
-    <Layout>
-      <Routes>
-        <Route path="/"          element={<HomePage />}     />
-        <Route path="/projects"  element={<ProjectsPage />} />
-        <Route path="/posts"     element={<PostsPage />}    />
-        <Route path="/about"     element={<AboutPage />}    />
-        {/* Add more routes here */}
-        <Route path="*"          element={<NotFoundPage />} />
-      </Routes>
-    </Layout>
+    <ProjectModalProvider>
+      <Layout>
+        <Routes>
+          <Route path="/"          element={<HomePage />}     />
+          <Route path="/projects"  element={<ProjectsPage />} />
+          <Route path="/posts"     element={<PostsPage />}    />
+          <Route path="/about"     element={<AboutPage />}    />
+          {/* Add more routes here */}
+          <Route path="*"          element={<NotFoundPage />} />
+        </Routes>
+      </Layout>
+    </ProjectModalProvider>
   </BrowserRouter>
 );
 
