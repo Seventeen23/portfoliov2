@@ -16,11 +16,19 @@ import robotskie_banner from "../assets/banners/robotskie_banner.png"; // Projec
 import gumzy_banner    from "../assets/banners/gumzy_banner.png"; // Project Banner
 import davaofare_banner from "../assets/banners/davaofare_banner.png"; // Project Banner
 
+import candyeye_banner  from "../assets/banners/candyeye_banner.svg"; // Project Banner
+import choco_banner     from "../assets/banners/choco_banner.svg"; // Project Banner
+import coinph_banner    from "../assets/banners/coinph_banner.svg"; // Project Banner
+import dota_cli_banner  from "../assets/banners/dota_cli_banner.svg"; // Project Banner
+import portfolio_banner from "../assets/banners/portfolio_banner.svg"; // Project Banner
+import sna_paper_banner from "../assets/banners/sna_paper_banner.svg"; // Project Banner
+import giv_banner       from "../assets/banners/giv_banner.svg"; // Project Banner
+
 export const profile = {
   name: "Seventeen",
   displayNames: ["Matthew Feri Tanutan (en)","Seventeen (en)", "実佳 (jp)"],
   pronouns: "(He/Him)",
-  tagline: "Full-stack | Data Scientist crafting web experiences & open-source tools. Aspiring game developer, AI researcher & developer.",
+  tagline: "Full-stack | Data Scientist crafting web experiences & open-source tools. Aspiring game developer, and AI / LLM researcher & engineer.",
   avatar: avatar, // URL to your avatar image, leave empty for initials fallback
   socials: [
     { label: "Resume",    href: "/Resume.pdf",                                icon: "resume",     download: true },
@@ -232,6 +240,181 @@ export const projectCategories: ProjectCategory[] = [
         ],
       },
       {
+        title: "MCIIS DMS",
+        href: "#",
+        description: "A Document Management System for Mindanao Center for Informatics and Intelligent Systems (MCIIS) which allows users to manage and track documents digitally. \n\nBuilt with PHP, HTML, CSS, and JavaScript.",
+        tags: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
+        banner: mciis_banner,
+        tagline: "A real document management system for a real research center — paper trails replaced with click trails.",
+        role: "Full-stack Developer",
+        timeline: "Academic / institutional build",
+        status: "Delivered",
+        overview: [
+          "MCIIS DMS is a Document Management System built for the Mindanao Center for Informatics and Intelligent Systems, letting staff create, manage, and track documents digitally instead of losing them in folders and inboxes.",
+          "It covers the full lifecycle: upload, categorize, route, and track the status of every document, with role-based access so the right people see the right files.",
+          "Classic stack, serious responsibility — a PHP and MariaDB application built to survive real institutional use.",
+        ],
+        techStack: [
+          { group: "Backend",  items: ["PHP", "MariaDB", "SQL"] },
+          { group: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
+          { group: "Domain",   items: ["Document Workflow", "Record Tracking"] },
+        ],
+        highlights: [
+          { title: "Full CRUD document lifecycle", detail: "Create, route, track, and archive — the whole workflow, not a demo slice." },
+          { title: "Built for an actual institution", detail: "Delivered for MCIIS, not a classroom exercise." },
+          { title: "Digital record-keeping that sticks", detail: "Replaced manual tracking with auditable, queryable document status." },
+        ],
+        links: [],
+      },
+      {
+        title: "Portfolio Site",
+        href: "https://seventeen-portfolio.vercel.app/",
+        description: "This portfolio! Built with React and TypeScript.",
+        tags: ["React", "TypeScript", "Tailwind"],
+        banner: portfolio_banner,
+        badge: "WIP",
+        tagline: "The site you're looking at right now — designed, built, and deployed by me.",
+        role: "Designer & Developer",
+        timeline: "Ongoing",
+        status: "WIP · always evolving",
+        overview: [
+          "This portfolio is React 19, TypeScript, Tailwind CSS v4, and React Router — component-driven, typed end to end, and shipped through Vite to Vercel with Vercel Analytics wired in.",
+          "Every block here is hand-built: the scroll-reveal system, the project cards, this very detail window you're reading. It's my sandbox for trying things I want to try, which is exactly why it stays fun.",
+          "Treat it as a live resume — it changes as I do.",
+        ],
+        techStack: [
+          { group: "Frontend", items: ["React 19", "TypeScript", "Tailwind CSS v4"] },
+          { group: "Build",    items: ["Vite", "ESLint", "tsc"] },
+          { group: "Delivery", items: ["Vercel", "Vercel Analytics"] },
+        ],
+        highlights: [
+          { title: "Typed end to end", detail: "Strict TypeScript across data, components, and routing." },
+          { title: "Zero UI library", detail: "Every component, animation, and interaction written from scratch." },
+          { title: "Hand-rolled motion", detail: "Custom IntersectionObserver reveal system instead of an animation dependency." },
+        ],
+        stats: [
+          { value: "0", label: "UI component libraries used" },
+          { value: "100%", label: "hand-written components" },
+        ],
+        links: [
+          { label: "Launch Live Site", href: "https://seventeen-portfolio.vercel.app/", kind: "live" },
+        ],
+      },
+    ],
+  },
+  {
+    emoji: "📊",
+    title: "Data & Visualization",
+    projects: [
+      {
+        title: "DenguePH",
+        href: "https://matthew-usep.shinyapps.io/DenguePHDashboard/",
+        description: "An interactive dashboard built with R and Shiny that visualizes dengue fever trends in the Philippines. \n\nFeatures include time series analysis, heatmaps, and predictive modeling to identify high-risk areas.",
+        tags: ["Shiny", "Markdown", "R", "Data Analysis & Visualization", "Data Cleaning"],
+        banner: dengueph_banner,
+        tagline: "Philippine dengue data made legible — trends, hotspots, and forecasts in one interactive dashboard.",
+        role: "Data Analyst & Developer",
+        timeline: "Data science project",
+        status: "Live on shinyapps.io",
+        overview: [
+          "DenguePH is an interactive R/Shiny dashboard that visualizes dengue fever trends across the Philippines: time series of case counts, geographic heatmaps of hotspots, and predictive modeling to flag where cases are likely to spike next.",
+          "The hard part was never the charts — it was the data. Cleaning, reconciling, and formatting real public health data until it told a trustworthy story, then encoding that story in Markdown-driven, reproducible analysis.",
+          "It's deployed publicly and runs live.",
+        ],
+        techStack: [
+          { group: "Language", items: ["R", "Markdown"] },
+          { group: "App",      items: ["Shiny", "Interactive Dashboards"] },
+          { group: "Analysis", items: ["Time Series Analysis", "Heatmaps", "Predictive Modeling"] },
+          { group: "Data",     items: ["Data Cleaning", "Analysis & Visualization"] },
+        ],
+        highlights: [
+          { title: "Three views of one epidemic", detail: "Time series, geographic heatmaps, and predictive risk modeling in a single app." },
+          { title: "Predictive hotspot detection", detail: "Modeling that identifies high-risk areas before the cases land." },
+          { title: "Reproducible & public", detail: "Deployed on shinyapps.io — anyone can open it and explore the data." },
+        ],
+        stats: [
+          { value: "Live", label: "public Shiny deployment" },
+          { value: "3 views", label: "trends, heatmaps, forecasts" },
+        ],
+        links: [
+          { label: "Launch Live Dashboard", href: "https://matthew-usep.shinyapps.io/DenguePHDashboard/", kind: "live" },
+        ],
+      },
+    ],
+  },
+  {
+    emoji: "🤖",
+    title: "AI & Machine Learning",
+    projects: [
+      {
+        title: "Candy Eye - Lightweight Object Detection Model",
+        href: "https://github.com/Seventeen23/CandyEye",
+        description: "A lightweight object detection cpu first model implemented in Python from scratch.",
+        tags: ["Python", "CPU First Computing", "Computer Vision", "Optimization"],
+        banner: candyeye_banner,
+        badge: "WIP & PET",
+        tagline: "Object detection written from scratch, tuned so it runs fast on ordinary CPUs — no GPU required.",
+        role: "Author & Maintainer",
+        timeline: "Ongoing · research-flavored side project",
+        status: "WIP · PET",
+        overview: [
+          "CandyEye is a lightweight object detection model implemented in Python from first principles — not a wrapper around a pretrained library, but the actual architecture, training loop, and inference path written out.",
+          "The constraint that makes it interesting: CPU-first computing. While the field optimizes for ever-bigger GPUs, CandyEye optimizes for the machine that everyone actually has, squeezing usable detection out of plain CPUs through careful architecture choices and real optimization work.",
+          "It's part research, part engineering, and part proof that I'd rather understand how it works than call an API.",
+        ],
+        techStack: [
+          { group: "Core",       items: ["Python", "NumPy", "From-scratch implementation"] },
+          { group: "Focus",      items: ["CPU First Computing", "Optimization", "Model Compression"] },
+          { group: "Domain",     items: ["Computer Vision", "Object Detection"] },
+        ],
+        highlights: [
+          { title: "Built from scratch", detail: "Architecture, training, and inference written out — no black-box framework hiding the math." },
+          { title: "CPU-first by design", detail: "Optimized for commodity hardware instead of assuming a datacenter GPU." },
+          { title: "Open source", detail: "Publicly available and under active development." },
+        ],
+        stats: [
+          { value: "From scratch", label: "no detection framework shortcuts" },
+          { value: "CPU", label: "first-class target hardware" },
+        ],
+        links: [
+          { label: "View Repository", href: "https://github.com/Seventeen23/CandyEye", kind: "repo" },
+        ],
+      },
+      {
+        title: "Choco - Personal Agentic Assistant",
+        href: "https://github.com/Seventeen23/choco",
+        description: "A personal agentic assistant that plans and executes multi-step tasks on your behalf through an LLM-driven tool-calling loop, running locally from the command line. \n\nBuilt with Python and LLM tooling.",
+        banner: choco_banner,
+        tags: ["Python", "LLM", "Agentic AI", "Prompt Engineering"],
+        tagline: "A local, CLI-native agent that breaks your goal into steps and executes them — with real tools, not vibes.",
+        role: "Creator",
+        timeline: "Ongoing side project",
+        status: "Open source",
+        overview: [
+          "Choco is a personal agentic assistant that runs from your command line. Give it a goal and it plans the steps, calls the tools it needs, reads the results, and decides what to do next — an LLM-driven tool-calling loop that keeps going until the task is actually done.",
+          "Everything runs locally: your shell, your files, your model endpoint. No cloud agent sitting between you and your machine.",
+          "It's the project that taught me the most about what agents really are — not magic, but a tight loop of planning, acting, observing, and deciding, done reliably.",
+        ],
+        techStack: [
+          { group: "Core",     items: ["Python", "LLM Tooling", "Tool-calling Loop"] },
+          { group: "Agentic",  items: ["Task Planning", "Multi-step Execution", "State Tracking"] },
+          { group: "Runtime",  items: ["Local Execution", "CLI", "Shell Integration"] },
+          { group: "Craft",    items: ["Prompt Engineering"] },
+        ],
+        highlights: [
+          { title: "Real agentic loop", detail: "Plan → act → observe → repeat, not a single-shot prompt wrapper." },
+          { title: "Runs locally from the CLI", detail: "Works on your own machine, files, and shell — private by default." },
+          { title: "Genuinely useful tooling", detail: "Multi-step tasks executed end to end instead of just suggested." },
+        ],
+        stats: [
+          { value: "Local", label: "runs on your machine" },
+          { value: "Multi-step", label: "autonomous task execution" },
+        ],
+        links: [
+          { label: "View Repository", href: "https://github.com/Seventeen23/choco", kind: "repo" },
+        ],
+      },
+      {
         title: "IsdaKnow",
         href: "#",
         description: "An AI-Powered web app that identifies fish species by uploading a fish image or via realtime web camera. Also won 3rd Place in the InnoFiesta 2024: AI and Data Science Competition. \n\nBuilt with YOLOv8, Flask, and OpenCV",
@@ -267,172 +450,35 @@ export const projectCategories: ProjectCategory[] = [
         links: [],
       },
       {
-        title: "MCIIS DMS",
+        title: "Giv",
         href: "#",
-        description: "A Document Management System for Mindanao Center for Informatics and Intelligent Systems (MCIIS) which allows users to manage and track documents digitally. \n\nBuilt with PHP, HTML, CSS, and JavaScript.",
-        tags: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
-        banner: mciis_banner,
-        tagline: "A real document management system for a real research center — paper trails replaced with click trails.",
-        role: "Full-stack Developer",
-        timeline: "Academic / institutional build",
-        status: "Delivered",
+        description: "A CPU-first experiment built from scratch to see how far performance can be pushed on ordinary hardware. \n\nBuilt with Python.",
+        tags: ["Python", "CPU First Computing", "Experiment", "Optimization"],
+        banner: giv_banner,
+        badge: "Experiment",
+        tagline: "A from-scratch CPU-first experiment in the same spirit as Candy Eye — just for the fun of finding out.",
+        role: "Creator & Author",
+        timeline: "Side experiment",
+        status: "Experiment · WIP",
         overview: [
-          "MCIIS DMS is a Document Management System built for the Mindanao Center for Informatics and Intelligent Systems, letting staff create, manage, and track documents digitally instead of losing them in folders and inboxes.",
-          "It covers the full lifecycle: upload, categorize, route, and track the status of every document, with role-based access so the right people see the right files.",
-          "Classic stack, serious responsibility — a PHP and MariaDB application built to survive real institutional use.",
+          "Giv is an experiment: a CPU-first, from-scratch build that exists to answer a question rather than ship a product. How much can you get out of ordinary hardware if you refuse to assume a GPU?",
+          "Like Candy Eye, it's written from first principles — no framework doing the interesting parts for me — so every speedup is a decision I can actually explain.",
+          "No roadmap and no promises. It's here because experimenting is how I actually learn.",
         ],
         techStack: [
-          { group: "Backend",  items: ["PHP", "MariaDB", "SQL"] },
-          { group: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
-          { group: "Domain",   items: ["Document Workflow", "Record Tracking"] },
+          { group: "Core",  items: ["Python", "From-scratch implementation"] },
+          { group: "Focus", items: ["CPU First Computing", "Optimization"] },
+          { group: "Kind",  items: ["Experiment", "Research-flavored"] },
         ],
         highlights: [
-          { title: "Full CRUD document lifecycle", detail: "Create, route, track, and archive — the whole workflow, not a demo slice." },
-          { title: "Built for an actual institution", detail: "Delivered for MCIIS, not a classroom exercise." },
-          { title: "Digital record-keeping that sticks", detail: "Replaced manual tracking with auditable, queryable document status." },
+          { title: "Pure experimentation", detail: "Built to explore, not to ship — the whole point is finding out what works." },
+          { title: "CPU-first, from scratch", detail: "Ordinary hardware and first-principles implementation, in the same spirit as Candy Eye." },
+        ],
+        stats: [
+          { value: "CPU", label: "first target hardware" },
+          { value: "Scratch", label: "built from first principles" },
         ],
         links: [],
-      },
-      {
-        title: "DenguePH",
-        href: "https://matthew-usep.shinyapps.io/DenguePHDashboard/",
-        description: "An interactive dashboard built with R and Shiny that visualizes dengue fever trends in the Philippines. \n\nFeatures include time series analysis, heatmaps, and predictive modeling to identify high-risk areas.",
-        tags: ["Shiny", "Markdown", "R", "Data Analysis & Visualization", "Data Cleaning"],
-        banner: dengueph_banner,
-        tagline: "Philippine dengue data made legible — trends, hotspots, and forecasts in one interactive dashboard.",
-        role: "Data Analyst & Developer",
-        timeline: "Data science project",
-        status: "Live on shinyapps.io",
-        overview: [
-          "DenguePH is an interactive R/Shiny dashboard that visualizes dengue fever trends across the Philippines: time series of case counts, geographic heatmaps of hotspots, and predictive modeling to flag where cases are likely to spike next.",
-          "The hard part was never the charts — it was the data. Cleaning, reconciling, and formatting real public health data until it told a trustworthy story, then encoding that story in Markdown-driven, reproducible analysis.",
-          "It's deployed publicly and runs live.",
-        ],
-        techStack: [
-          { group: "Language", items: ["R", "Markdown"] },
-          { group: "App",      items: ["Shiny", "Interactive Dashboards"] },
-          { group: "Analysis", items: ["Time Series Analysis", "Heatmaps", "Predictive Modeling"] },
-          { group: "Data",     items: ["Data Cleaning", "Analysis & Visualization"] },
-        ],
-        highlights: [
-          { title: "Three views of one epidemic", detail: "Time series, geographic heatmaps, and predictive risk modeling in a single app." },
-          { title: "Predictive hotspot detection", detail: "Modeling that identifies high-risk areas before the cases land." },
-          { title: "Reproducible & public", detail: "Deployed on shinyapps.io — anyone can open it and explore the data." },
-        ],
-        stats: [
-          { value: "Live", label: "public Shiny deployment" },
-          { value: "3 views", label: "trends, heatmaps, forecasts" },
-        ],
-        links: [
-          { label: "Launch Live Dashboard", href: "https://matthew-usep.shinyapps.io/DenguePHDashboard/", kind: "live" },
-        ],
-      },
-      {
-        title: "Portfolio Site",
-        href: "https://seventeen-portfolio.vercel.app/",
-        description: "This portfolio! Built with React and TypeScript.",
-        tags: ["React", "TypeScript", "Tailwind"],
-        // banner: portfolio_banner,
-        badge: "WIP",
-        tagline: "The site you're looking at right now — designed, built, and deployed by me.",
-        role: "Designer & Developer",
-        timeline: "Ongoing",
-        status: "WIP · always evolving",
-        overview: [
-          "This portfolio is React 19, TypeScript, Tailwind CSS v4, and React Router — component-driven, typed end to end, and shipped through Vite to Vercel with Vercel Analytics wired in.",
-          "Every block here is hand-built: the scroll-reveal system, the project cards, this very detail window you're reading. It's my sandbox for trying things I want to try, which is exactly why it stays fun.",
-          "Treat it as a live resume — it changes as I do.",
-        ],
-        techStack: [
-          { group: "Frontend", items: ["React 19", "TypeScript", "Tailwind CSS v4"] },
-          { group: "Build",    items: ["Vite", "ESLint", "tsc"] },
-          { group: "Delivery", items: ["Vercel", "Vercel Analytics"] },
-        ],
-        highlights: [
-          { title: "Typed end to end", detail: "Strict TypeScript across data, components, and routing." },
-          { title: "Zero UI library", detail: "Every component, animation, and interaction written from scratch." },
-          { title: "Hand-rolled motion", detail: "Custom IntersectionObserver reveal system instead of an animation dependency." },
-        ],
-        stats: [
-          { value: "0", label: "UI component libraries used" },
-          { value: "100%", label: "hand-written components" },
-        ],
-        links: [
-          { label: "Launch Live Site", href: "https://seventeen-portfolio.vercel.app/", kind: "live" },
-        ],
-      },
-    ],
-  },
-  {
-    emoji: "🤖",
-    title: "AI & Machine Learning",
-    projects: [
-      {
-        title: "Candy Eye - Lightweight Object Detection Model",
-        href: "https://github.com/Seventeen23/CandyEye",
-        description: "A lightweight object detection cpu first model implemented in Python from scratch.",
-        tags: ["Python", "CPU First Computing", "Computer Vision", "Optimization"],
-        badge: "WIP & PET",
-        tagline: "Object detection written from scratch, tuned so it runs fast on ordinary CPUs — no GPU required.",
-        role: "Author & Maintainer",
-        timeline: "Ongoing · research-flavored side project",
-        status: "WIP · PET",
-        overview: [
-          "CandyEye is a lightweight object detection model implemented in Python from first principles — not a wrapper around a pretrained library, but the actual architecture, training loop, and inference path written out.",
-          "The constraint that makes it interesting: CPU-first computing. While the field optimizes for ever-bigger GPUs, CandyEye optimizes for the machine that everyone actually has, squeezing usable detection out of plain CPUs through careful architecture choices and real optimization work.",
-          "It's part research, part engineering, and part proof that I'd rather understand how it works than call an API.",
-        ],
-        techStack: [
-          { group: "Core",       items: ["Python", "NumPy", "From-scratch implementation"] },
-          { group: "Focus",      items: ["CPU First Computing", "Optimization", "Model Compression"] },
-          { group: "Domain",     items: ["Computer Vision", "Object Detection"] },
-        ],
-        highlights: [
-          { title: "Built from scratch", detail: "Architecture, training, and inference written out — no black-box framework hiding the math." },
-          { title: "CPU-first by design", detail: "Optimized for commodity hardware instead of assuming a datacenter GPU." },
-          { title: "Open source", detail: "Publicly available and under active development." },
-        ],
-        stats: [
-          { value: "From scratch", label: "no detection framework shortcuts" },
-          { value: "CPU", label: "first-class target hardware" },
-        ],
-        links: [
-          { label: "View Repository", href: "https://github.com/Seventeen23/CandyEye", kind: "repo" },
-        ],
-      },
-      {
-        title: "Choco - Personal Agentic Assistant",
-        href: "https://github.com/Seventeen23/choco",
-        description: "A personal agentic assistant that plans and executes multi-step tasks on your behalf through an LLM-driven tool-calling loop, running locally from the command line. \n\nBuilt with Python and LLM tooling.",
-        // banner: choco_banner,
-        tags: ["Python", "LLM", "Agentic AI", "Prompt Engineering"],
-        tagline: "A local, CLI-native agent that breaks your goal into steps and executes them — with real tools, not vibes.",
-        role: "Creator",
-        timeline: "Ongoing side project",
-        status: "Open source",
-        overview: [
-          "Choco is a personal agentic assistant that runs from your command line. Give it a goal and it plans the steps, calls the tools it needs, reads the results, and decides what to do next — an LLM-driven tool-calling loop that keeps going until the task is actually done.",
-          "Everything runs locally: your shell, your files, your model endpoint. No cloud agent sitting between you and your machine.",
-          "It's the project that taught me the most about what agents really are — not magic, but a tight loop of planning, acting, observing, and deciding, done reliably.",
-        ],
-        techStack: [
-          { group: "Core",     items: ["Python", "LLM Tooling", "Tool-calling Loop"] },
-          { group: "Agentic",  items: ["Task Planning", "Multi-step Execution", "State Tracking"] },
-          { group: "Runtime",  items: ["Local Execution", "CLI", "Shell Integration"] },
-          { group: "Craft",    items: ["Prompt Engineering"] },
-        ],
-        highlights: [
-          { title: "Real agentic loop", detail: "Plan → act → observe → repeat, not a single-shot prompt wrapper." },
-          { title: "Runs locally from the CLI", detail: "Works on your own machine, files, and shell — private by default." },
-          { title: "Genuinely useful tooling", detail: "Multi-step tasks executed end to end instead of just suggested." },
-        ],
-        stats: [
-          { value: "Local", label: "runs on your machine" },
-          { value: "Multi-step", label: "autonomous task execution" },
-        ],
-        links: [
-          { label: "View Repository", href: "https://github.com/Seventeen23/choco", kind: "repo" },
-        ],
       },
     ],
   },
@@ -488,6 +534,7 @@ export const projectCategories: ProjectCategory[] = [
         href: "https://github.com/Seventeen23/CandyEye",
         description: "A lightweight object detection cpu first model implemented in Python from scratch.",
         tags: ["Python", "CPU First Computing", "Computer Vision", "Optimization"],
+        banner: candyeye_banner,
         badge: "WIP & PET",
         tagline: "Object detection written from scratch, tuned so it runs fast on ordinary CPUs — no GPU required.",
         role: "Author & Maintainer",
@@ -515,6 +562,37 @@ export const projectCategories: ProjectCategory[] = [
         links: [
           { label: "View Repository", href: "https://github.com/Seventeen23/CandyEye", kind: "repo" },
         ],
+      },
+      {
+        title: "Giv",
+        href: "#",
+        description: "A CPU-first experiment built from scratch to see how far performance can be pushed on ordinary hardware. \n\nBuilt with Python.",
+        tags: ["Python", "CPU First Computing", "Experiment", "Optimization"],
+        banner: giv_banner,
+        badge: "Experiment",
+        tagline: "A from-scratch CPU-first experiment in the same spirit as Candy Eye — just for the fun of finding out.",
+        role: "Creator & Author",
+        timeline: "Side experiment",
+        status: "Experiment · WIP",
+        overview: [
+          "Giv is an experiment: a CPU-first, from-scratch build that exists to answer a question rather than ship a product. How much can you get out of ordinary hardware if you refuse to assume a GPU?",
+          "Like Candy Eye, it's written from first principles — no framework doing the interesting parts for me — so every speedup is a decision I can actually explain.",
+          "No roadmap and no promises. It's here because experimenting is how I actually learn.",
+        ],
+        techStack: [
+          { group: "Core",  items: ["Python", "From-scratch implementation"] },
+          { group: "Focus", items: ["CPU First Computing", "Optimization"] },
+          { group: "Kind",  items: ["Experiment", "Research-flavored"] },
+        ],
+        highlights: [
+          { title: "Pure experimentation", detail: "Built to explore, not to ship — the whole point is finding out what works." },
+          { title: "CPU-first, from scratch", detail: "Ordinary hardware and first-principles implementation, in the same spirit as Candy Eye." },
+        ],
+        stats: [
+          { value: "CPU", label: "first target hardware" },
+          { value: "Scratch", label: "built from first principles" },
+        ],
+        links: [],
       }
     ],
   },
@@ -527,6 +605,7 @@ export const projectCategories: ProjectCategory[] = [
         href: "#",
         description: "A simple trading bot that interacts with the CoinPH API to execute basic trading strategies. \n\nBuilt with Python and the CoinPH API.",
         tags: ["Python", "CoinPH API", "Basic Trading Algorithms"],
+        banner: coinph_banner,
         tagline: "Automating crypto trades against the CoinPH API — strategies coded, emotions removed.",
         role: "Developer",
         timeline: "Side project",
@@ -553,6 +632,7 @@ export const projectCategories: ProjectCategory[] = [
         href: "#",
         description: "A simple command-line tool that predicts the outcome of Dota 2 matches based on team compositions and historical data. \n\nBuilt with Python and the OpenDota API.",
         tags: ["Python", "OpenDota API", "XGBoost", "Data Analysis", "Machine Learning" ],
+        banner: dota_cli_banner,
         tagline: "OpenDota data in, match predictions out — a machine learning model that lives in your terminal.",
         role: "Developer",
         timeline: "Side project",
@@ -585,6 +665,7 @@ export const projectCategories: ProjectCategory[] = [
         href: "/sna_paper.pdf",
         description: "A research paper that investigates the relationship between various network metrics and the transmission of infectious diseases within a medical contact network.",
         tags: ["Network Analysis", "Epidemiology", "Data Science"],
+        banner: sna_paper_banner,
         badge: "Unpublished",
         tagline: "When does a network's shape predict an outbreak? A data-driven look at disease spread through medical contact networks.",
         role: "Author & Researcher",

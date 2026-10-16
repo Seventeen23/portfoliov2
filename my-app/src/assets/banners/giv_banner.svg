@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" font-family="'Segoe UI',system-ui,-apple-system,Roboto,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e0e11"/>
+      <stop offset="0.55" stop-color="#171a3a"/>
+      <stop offset="1" stop-color="#171a3a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.08" r="0.8">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.45"/>
+      <stop offset="0.5" stop-color="#818cf8" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#818cf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="640" fill="url(#bg)"/>
+  <rect width="1600" height="640" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"><line x1="0" y1="0" x2="0" y2="640"/><line x1="80" y1="0" x2="80" y2="640"/><line x1="160" y1="0" x2="160" y2="640"/><line x1="240" y1="0" x2="240" y2="640"/><line x1="320" y1="0" x2="320" y2="640"/><line x1="400" y1="0" x2="400" y2="640"/><line x1="480" y1="0" x2="480" y2="640"/><line x1="560" y1="0" x2="560" y2="640"/><line x1="640" y1="0" x2="640" y2="640"/><line x1="720" y1="0" x2="720" y2="640"/><line x1="800" y1="0" x2="800" y2="640"/><line x1="880" y1="0" x2="880" y2="640"/><line x1="960" y1="0" x2="960" y2="640"/><line x1="1040" y1="0" x2="1040" y2="640"/><line x1="1120" y1="0" x2="1120" y2="640"/><line x1="1200" y1="0" x2="1200" y2="640"/><line x1="1280" y1="0" x2="1280" y2="640"/><line x1="1360" y1="0" x2="1360" y2="640"/><line x1="1440" y1="0" x2="1440" y2="640"/><line x1="1520" y1="0" x2="1520" y2="640"/><line x1="1600" y1="0" x2="1600" y2="640"/><line x1="0" y1="0" x2="1600" y2="0"/><line x1="0" y1="80" x2="1600" y2="80"/><line x1="0" y1="160" x2="1600" y2="160"/><line x1="0" y1="240" x2="1600" y2="240"/><line x1="0" y1="320" x2="1600" y2="320"/><line x1="0" y1="400" x2="1600" y2="400"/><line x1="0" y1="480" x2="1600" y2="480"/><line x1="0" y1="560" x2="1600" y2="560"/><line x1="0" y1="640" x2="1600" y2="640"/></g>
+
+  <g transform="translate(1080,150)" fill="none" stroke="#818cf8" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    
+    <rect x="70" y="110" width="200" height="200" rx="16" stroke-opacity="0.8"/>
+    <rect x="130" y="170" width="80" height="80" rx="8" stroke-opacity="0.6"/>
+    <line x1="110" y1="70" x2="110" y2="110" stroke-opacity="0.6"/>
+    <line x1="230" y1="70" x2="230" y2="110" stroke-opacity="0.6"/>
+    <line x1="110" y1="310" x2="110" y2="350" stroke-opacity="0.6"/>
+    <line x1="230" y1="310" x2="230" y2="350" stroke-opacity="0.6"/>
+    <line x1="30" y1="160" x2="70" y2="160" stroke-opacity="0.6"/>
+    <line x1="30" y1="210" x2="70" y2="210" stroke-opacity="0.6"/>
+    <line x1="30" y1="260" x2="70" y2="260" stroke-opacity="0.6"/>
+    <line x1="270" y1="160" x2="310" y2="160" stroke-opacity="0.6"/>
+    <line x1="270" y1="210" x2="310" y2="210" stroke-opacity="0.6"/>
+    <line x1="270" y1="260" x2="310" y2="260" stroke-opacity="0.6"/>
+    <path d="M148 210 L162 210 L172 190 L182 228 L192 210 L206 210" stroke-width="5"/>
+  </g>
+
+  <text x="110" y="150" font-size="24" font-weight="700" letter-spacing="7" fill="#818cf8" fill-opacity="0.9">EXPERIMENT · CPU FIRST</text>
+  <rect x="110" y="176" width="150" height="3" rx="1.5" fill="url(#rule)"/>
+
+  <text x="108" y="330" font-size="82" font-weight="800" fill="#ffffff">Giv</text>
+  <text x="110" y="392" font-size="29" fill="#ffffff" fill-opacity="0.55">A from-scratch experiment on ordinary hardware.</text>
+
+  <text x="1500" y="600" font-size="20" font-weight="600" letter-spacing="2" text-anchor="end" fill="#ffffff" fill-opacity="0.18">SEVENTEEN</text>
+</svg>

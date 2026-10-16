@@ -11,7 +11,7 @@ const stats = [
   { value: "15+",     label: "projects shipped across 7 categories" },
   { value: "2",       label: "global challenges — NASA Space Apps & UNDP" },
   { value: "3rd",     label: "place, InnoFiesta 2024 AI & Data Science" },
-  { value: "Sept 2026", label: "graduating — open to opportunities" },
+  { value: "Aug 2026", label: "graduated — open to opportunities" },
 ];
 
 // ─── Focus areas ───────────────────────────────────────────────────
@@ -24,9 +24,9 @@ const focusAreas = [
   },
   {
     emoji: "🧠",
-    title: "ML & Computer Vision",
-    blurb: "Models that ship — YOLO detectors trained, validated, and deployed onto actual hardware at the edge. Annotation pipelines, evaluation, and the boring data quality work that makes accuracy possible.",
-    chips: ["YOLO", "PyTorch", "OpenCV", "XGBoost", "NLP"],
+    title: "AI, LLMs & Computer Vision",
+    blurb: "Models that ship — YOLO detectors deployed to the edge, plus LLM systems built on retrieval, tool-calling, and agentic loops. Annotation, evaluation, and the boring data-quality work that makes any of it accurate.",
+    chips: ["LLMs", "RAG", "Agentic AI", "PyTorch", "YOLO", "OpenCV"],
   },
   {
     emoji: "📊",
@@ -38,6 +38,17 @@ const focusAreas = [
 
 // ─── Experience ────────────────────────────────────────────────────
 const experience = [
+  {
+    role: "Data Engineer (Freelance)",
+    org: "Direct Client — Remote",
+    meta: "June 2026 – August 2026 · 3 months",
+    points: [
+      "Built and maintained end-to-end data pipelines — ingestion, transformation, and loading — for a direct client, with no management layer between us.",
+      "Designed data models and ETL workflows that turned messy source data into something reporting could actually trust.",
+      "Owned data quality, validation, and scheduling so pipelines ran reliably without babysitting.",
+      "Three months, one client, real deliverables — scoped and shipped on my own.",
+    ],
+  },
   {
     role: "Software Developer Intern",
     org: "Southern Philippines Medical Center (SPMC) — Davao City",
@@ -76,7 +87,7 @@ const education = [
   {
     degree: "B.S. Computer Science — Major in Data Science",
     school: "University of Southeastern Philippines, Obrero, Davao City",
-    meta: "Expected September 2026 · Dean's Lister",
+    meta: "Graduated August 2026 · Dean's Lister",
     points: [
       "Coursework across programming paradigms, computer networks, data science, big data, and machine learning — the technical foundation under everything on this site.",
       "Recognized as a Dean's Lister.",
@@ -97,8 +108,8 @@ const education = [
 const skillGroups = [
   { emoji: "⌨️",  label: "Languages",        items: ["Python", "TypeScript", "JavaScript", "Java", "PHP", "R", "SQL"] },
   { emoji: "🌐",  label: "Web & Backend",    items: ["React", "FastAPI", "Django", "Flask", "Tailwind CSS", "PostgreSQL", "MariaDB", "MongoDB"] },
-  { emoji: "🧠",  label: "AI & Machine Learning", items: ["Machine Learning", "PyTorch", "YOLO", "OpenCV", "XGBoost", "NLP", "Prompt Engineering"] },
-  { emoji: "📊",  label: "Data & Analytics", items: ["Data Analysis & Visualization", "Data Cleaning", "Tableau", "PowerBI", "Shiny"] },
+  { emoji: "🧠",  label: "AI & Machine Learning", items: ["Machine Learning", "LLMs", "RAG", "Agentic AI", "PyTorch", "YOLO", "OpenCV", "XGBoost", "NLP", "Prompt Engineering"] },
+  { emoji: "📊",  label: "Data & Analytics", items: ["Data Analysis & Visualization", "ETL & Data Pipelines", "Data Modeling", "Data Cleaning", "Tableau", "PowerBI", "Shiny"] },
   { emoji: "🛠️",  label: "Tools & Infra",    items: ["Git", "Docker", "Linux", "Vercel", "Android Studio", "Raspberry Pi"] },
 ];
 
@@ -110,6 +121,7 @@ const interests = [
   { emoji: "🕹️", label: "Game Development" },
   { emoji: "👁️", label: "Computer Vision" },
   { emoji: "🤖", label: "Machine Learning" },
+  { emoji: "💬", label: "LLMs & AI Agents" },
   { emoji: "🧩", label: "Web Development" },
   { emoji: "🔐", label: "Cyber Security" },
   { emoji: "⚡", label: "Pokémon" },
@@ -191,14 +203,14 @@ const AboutPage: React.FC = () => (
             </div>
 
             <p className="mt-4 text-[14.5px] leading-relaxed text-white/60">
-              Computer Science student at USeP majoring in <span className="text-violet-300">Data Science</span>, and a
-              full-stack developer who has shipped for the <span className="text-violet-300">United Nations</span>,
-              <span className="text-violet-300"> NASA's Space Apps</span>, and paying clients — often all before graduating.
-              I build backend systems that hold up, machine learning models that leave the notebook, and interfaces
-              people actually enjoy using.
+              Computer Science graduate from USeP majoring in <span className="text-violet-300">Data Science</span> — a
+              full-stack developer and <span className="text-violet-300">LLM builder</span> who has shipped for the
+              <span className="text-violet-300"> United Nations</span>,<span className="text-violet-300"> NASA's Space Apps</span>,
+              and paying clients. I build backend systems that hold up, machine learning and LLM systems that leave the
+              notebook, and interfaces people actually enjoy using.
             </p>
             <p className="mt-2.5 text-[14.5px] leading-relaxed text-white/60">
-              Graduating <span className="text-white/85">September 2026</span> and actively looking for a team where I can
+              Graduated <span className="text-white/85">August 2026</span> and actively looking for a team where I can
               contribute, learn loudly, and grow into the kind of engineer people remember.
             </p>
           </div>
