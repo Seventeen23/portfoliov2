@@ -17,19 +17,19 @@ const stats = [
 // ─── Focus areas ───────────────────────────────────────────────────
 const focusAreas = [
   {
-    emoji: "🧱",
+    emoji: "",
     title: "Full-stack Engineering",
     blurb: "Scalable backends in FastAPI and Django, typed React front ends, and the API contracts that hold them together. I like owning a feature from database schema to the pixel.",
     chips: ["FastAPI", "Django", "React", "TypeScript", "PostgreSQL"],
   },
   {
-    emoji: "🧠",
+    emoji: "",
     title: "AI, LLMs & Computer Vision",
     blurb: "Models that ship — YOLO detectors deployed to the edge, plus LLM systems built on retrieval, tool-calling, and agentic loops. Annotation, evaluation, and the boring data-quality work that makes any of it accurate.",
     chips: ["LLMs", "RAG", "Agentic AI", "PyTorch", "YOLO", "OpenCV"],
   },
   {
-    emoji: "📊",
+    emoji: "",
     title: "Data Science & Visualization",
     blurb: "From messy raw data to a dashboard a stakeholder can read in five seconds. Time series, heatmaps, network analysis, and honest interpretation of what the numbers actually say.",
     chips: ["R", "Shiny", "Tableau", "PowerBI", "Pandas"],
@@ -106,25 +106,25 @@ const education = [
 
 // ─── Skills ────────────────────────────────────────────────────────
 const skillGroups = [
-  { emoji: "⌨️",  label: "Languages",        items: ["Python", "TypeScript", "JavaScript", "Java", "PHP", "R", "SQL"] },
-  { emoji: "🌐",  label: "Web & Backend",    items: ["React", "FastAPI", "Django", "Flask", "Tailwind CSS", "PostgreSQL", "MariaDB", "MongoDB"] },
-  { emoji: "🧠",  label: "AI & Machine Learning", items: ["Machine Learning", "LLMs", "RAG", "Agentic AI", "PyTorch", "YOLO", "OpenCV", "XGBoost", "NLP", "Prompt Engineering"] },
-  { emoji: "📊",  label: "Data & Analytics", items: ["Data Analysis & Visualization", "ETL & Data Pipelines", "Data Modeling", "Data Cleaning", "Tableau", "PowerBI", "Shiny"] },
-  { emoji: "🛠️",  label: "Tools & Infra",    items: ["Git", "Docker", "Linux", "Vercel", "Android Studio", "Raspberry Pi"] },
+  { emoji: "",  label: "Languages",        items: ["Python", "TypeScript", "JavaScript", "Java", "PHP", "R", "SQL"] },
+  { emoji: "",  label: "Web & Backend",    items: ["React", "FastAPI", "Django", "Flask", "Tailwind CSS", "PostgreSQL", "MariaDB", "MongoDB"] },
+  { emoji: "",  label: "AI & Machine Learning", items: ["Machine Learning", "LLMs", "RAG", "Agentic AI", "PyTorch", "YOLO", "OpenCV", "XGBoost", "NLP", "Prompt Engineering"] },
+  { emoji: "",  label: "Data & Analytics", items: ["Data Analysis & Visualization", "ETL & Data Pipelines", "Data Modeling", "Data Cleaning", "Tableau", "PowerBI", "Shiny"] },
+  { emoji: "",  label: "Tools & Infra",    items: ["Git", "Docker", "Linux", "Vercel", "Android Studio", "Raspberry Pi"] },
 ];
 
 // ─── Interests ─────────────────────────────────────────────────────
 const interests = [
-  { emoji: "📺", label: "Anime / Manga / Manhua" },
-  { emoji: "🎮", label: "Video Games" },
-  { emoji: "♟️", label: "Chess" },
-  { emoji: "🕹️", label: "Game Development" },
-  { emoji: "👁️", label: "Computer Vision" },
-  { emoji: "🤖", label: "Machine Learning" },
-  { emoji: "💬", label: "LLMs & AI Agents" },
-  { emoji: "🧩", label: "Web Development" },
-  { emoji: "🔐", label: "Cyber Security" },
-  { emoji: "⚡", label: "Pokémon" },
+  { emoji: "", label: "Anime / Manga / Manhua" },
+  { emoji: "", label: "Video Games" },
+  { emoji: "", label: "Chess" },
+  { emoji: "", label: "Game Development" },
+  { emoji: "", label: "Computer Vision" },
+  { emoji: "", label: "Machine Learning" },
+  { emoji: "", label: "LLMs & AI Agents" },
+  { emoji: "", label: "Web Development" },
+  { emoji: "", label: "Cyber Security" },
+  { emoji: "", label: "Pokémon" },
 ];
 
 // ─── Contact cards ─────────────────────────────────────────────────
@@ -178,7 +178,7 @@ const AboutPage: React.FC = () => (
     <Reveal>
       <section className="pt-10 pb-8">
         <div className="flex items-start gap-3 mb-4">
-          <span className="text-2xl">🙋</span>
+          <span className="text-2xl"></span>
           <h1 className="font-display font-bold text-[clamp(22px,5vw,28px)] text-white/90">About Me</h1>
         </div>
 
@@ -231,7 +231,7 @@ const AboutPage: React.FC = () => (
     </Reveal>
 
     {/* ── Focus areas ── */}
-    <Section emoji="🎯" title="What I Do" delay={40}>
+    <Section emoji="" title="What I Do" delay={40}>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
         {focusAreas.map(a => (
           <div key={a.title} className="rounded-2xl border border-white/[0.07] bg-[#16161a] p-4 hover:border-violet-400/25 hover:-translate-y-0.5 transition-all duration-300">
@@ -249,7 +249,7 @@ const AboutPage: React.FC = () => (
     </Section>
 
     {/* ── Experience ── */}
-    <Section emoji="🕒" title="Experience" delay={40}>
+    <Section emoji="" title="Experience" delay={40}>
       <ul>
         {experience.map((e, i) => (
           <TimelineItem
@@ -265,7 +265,7 @@ const AboutPage: React.FC = () => (
     </Section>
 
     {/* ── Education ── */}
-    <Section emoji="🎓" title="Education" delay={40}>
+    <Section emoji="" title="Education" delay={40}>
       <ul>
         {education.map((e, i) => (
           <TimelineItem
@@ -281,7 +281,7 @@ const AboutPage: React.FC = () => (
     </Section>
 
     {/* ── Skills ── */}
-    <Section emoji="🧠" title="Skills & Tooling" delay={40}>
+    <Section emoji="" title="Skills & Tooling" delay={40}>
       <div className="flex flex-col gap-2.5">
         {skillGroups.map(g => (
           <div key={g.label} className="rounded-2xl border border-white/[0.07] bg-[#16161a] px-4 py-3.5 hover:border-violet-400/25 transition-colors">
@@ -302,7 +302,7 @@ const AboutPage: React.FC = () => (
     </Section>
 
     {/* ── Interests ── */}
-    <Section emoji="🎨" title="Interests" delay={40}>
+    <Section emoji="" title="Interests" delay={40}>
       <div className="flex flex-wrap gap-2">
         {interests.map(i => (
           <span key={i.label} className="inline-flex items-center gap-1.5 text-[12.5px] px-3 py-1.5 rounded-full border border-white/[0.07] bg-[#16161a] text-white/55 hover:border-violet-400/35 hover:text-white/80 transition-all duration-200">
@@ -314,7 +314,7 @@ const AboutPage: React.FC = () => (
     </Section>
 
     {/* ── Contact ── */}
-    <Section emoji="📞" title="Get in Touch" delay={40}>
+    <Section emoji="" title="Get in Touch" delay={40}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {contacts.map(c => (
           <a

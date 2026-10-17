@@ -92,7 +92,7 @@ export interface ProjectCategory {
 
 export const projectCategories: ProjectCategory[] = [
   {
-    emoji: "🌐",
+    emoji: "",
     title: "Web Projects",
     projects: [
       {
@@ -303,7 +303,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "📊",
+    emoji: "",
     title: "Data & Visualization",
     projects: [
       {
@@ -343,7 +343,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "🤖",
+    emoji: "",
     title: "AI & Machine Learning",
     projects: [
       {
@@ -483,7 +483,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "📱",
+    emoji: "",
     title: "Android Applications",
     projects: [
       {
@@ -519,14 +519,14 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "🎮",
+    emoji: "",
     title: "Game Projects",
     projects: [
       // TO BE ADDED IN THE FUTURE
     ],
   },
   {
-    emoji: "📦",
+    emoji: "",
     title: "Packages / Libraries",
     projects: [
       {
@@ -597,7 +597,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "🛠️",
+    emoji: "",
     title: "Tools & CLI",
     projects: [
       {
@@ -657,7 +657,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "📄",
+    emoji: "",
     title: "Papers & Research",
     projects: [
       {
@@ -693,7 +693,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
   {
-    emoji: "✨",
+    emoji: "",
     title: "Misc",
     projects: [
       // TO BE ADDED IN THE FUTURE
