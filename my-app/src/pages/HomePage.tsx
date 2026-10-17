@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { profile, projectCategories, blogPosts, friends } from "../data/portfolioData";
+import type { Project } from "../data/portfolioData";
 import { SocialIcon } from "../components/Icons";
 // import { Reveal, CopyButton } from "../components/Layout";
 import { Reveal } from "../components/Layout";
-import { CategorySection } from "../components/ProjectCard";
+import { ProjectCard } from "../components/ProjectCard";
 
 // ─── Friend Avatar Chip ────────────────────────────────────────────
 const FriendChip: React.FC<{ name: string; href: string; avatar: string; delay: number }> = ({ name, href, avatar, delay }) => {
@@ -60,9 +61,20 @@ const Avatar: React.FC<{ src: string; name: string }> = ({ src, name }) => {
   );
 };
 
-// ─── Featured categories shown on the homepage preview ────────────
-const FEATURED_CATEGORIES = ["Web Projects", "Tools & CLI", "Papers & Research"];
-const featuredCategories = projectCategories.filter(c => FEATURED_CATEGORIES.includes(c.title));
+// ─── Homepage highlights — list the project titles to feature ─────
+// (edit this list to change what shows up on the homepage)
+const HIGHLIGHT_TITLES = [
+  "UNDP WasteWatch",
+  "GARDS: NASA Space Knowledge Engine",
+  "IsdaKnow",
+  "Candy Eye - Lightweight Object Detection Model",
+  "Choco - Personal Agentic Assistant",
+  "RobotSkie",
+];
+const allProjects = projectCategories.flatMap(c => c.projects);
+const highlights = HIGHLIGHT_TITLES
+  .map(title => allProjects.find(p => p.title === title))
+  .filter((p): p is Project => Boolean(p));
 
 const HomePage: React.FC = () => (
   <>
@@ -120,27 +132,24 @@ const HomePage: React.FC = () => (
       </section>
     )}
 
-    {/* Projects preview */}
+    {/* Highlights — curated best works */}
     <section className="pt-10">
       <Reveal>
         <div className="flex items-baseline justify-between mb-3">
-          <h2 className="font-display font-semibold text-[17px] text-white/90">Projects</h2>
-          <Link to="/projects" className="text-[13px] text-violet-400/60 hover:text-violet-400 transition-colors">View all →</Link>
+          <div>
+            <h2 className="font-display font-semibold text-[17px] text-white/90">Highlights</h2>
+            <p className="text-[12.5px] text-white/35 mt-0.5">A few things I'm proud of.</p>
+          </div>
+          <Link to="/projects" className="text-[13px] text-violet-400/60 hover:text-violet-400 transition-colors whitespace-nowrap">View all projects →</Link>
         </div>
       </Reveal>
-{featuredCategories.map((cat, i) => (
-          <Reveal key={cat.title} delay={i * 40}>
-            <CategorySection {...cat} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {highlights.map((p, i) => (
+          <Reveal key={p.title} delay={i * 40}>
+            <ProjectCard project={p} />
           </Reveal>
         ))}
-      {projectCategories.length > featuredCategories.length && (
-        <Reveal delay={120}>
-          <Link to="/projects"
-            className="mt-2 flex items-center justify-center gap-2 py-3 rounded-xl border border-white/[0.07] hover:border-violet-400/30 text-[13px] text-white/30 hover:text-violet-400 hover:bg-violet-400/5 transition-all">
-            View {projectCategories.length - featuredCategories.length} more categories →
-          </Link>
-        </Reveal>
-      )}
+      </div>
     </section>
 
     {/* Friends */}
